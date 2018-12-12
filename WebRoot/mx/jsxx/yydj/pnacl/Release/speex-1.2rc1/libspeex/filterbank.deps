@@ -1,0 +1,16 @@
+# Updated by fix_deps.py
+pnacl/Release/speex-1.2rc1/libspeex/filterbank.o: \
+  speex-1.2rc1/libspeex/filterbank.c speex-1.2rc1/libspeex/filterbank.h \
+  speex-1.2rc1/libspeex/arch.h speex-1.2rc1/libspeex/speex/speex_types.h \
+  speex-1.2rc1/libspeex/speex/speex_config_types.h \
+  speex-1.2rc1/libspeex/fixed_generic.h \
+  speex-1.2rc1/libspeex/math_approx.h speex-1.2rc1/libspeex/os_support.h
+:
+speex-1.2rc1/libspeex/filterbank.c:
+speex-1.2rc1/libspeex/filterbank.h:
+speex-1.2rc1/libspeex/arch.h:
+speex-1.2rc1/libspeex/speex/speex_types.h:
+speex-1.2rc1/libspeex/speex/speex_config_types.h:
+speex-1.2rc1/libspeex/fixed_generic.h:
+speex-1.2rc1/libspeex/math_approx.h:
+speex-1.2rc1/libspeex/os_support.h:

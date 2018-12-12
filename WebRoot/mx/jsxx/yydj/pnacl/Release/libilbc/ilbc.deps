@@ -1,0 +1,8 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/ilbc.o: libilbc/ilbc.cpp libilbc/ilbc.h \
+  libilbc/iLBC_encode.h libilbc/iLBC_define.h libilbc/iLBC_decode.h
+libilbc/ilbc.cpp:
+libilbc/ilbc.h:
+libilbc/iLBC_encode.h:
+libilbc/iLBC_define.h:
+libilbc/iLBC_decode.h:

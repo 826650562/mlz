@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.mlight.domain">
+	 <class name="MyMap" table="t_location">
+	     <id name="id">
+	        <column name="id"/>
+	        <generator class="native"/>
+	     </id>
+	     <property name="seqno">
+	        <column name="seq_no"/>
+	     </property>
+	     <property name="userid">
+	        <column name="user_id"/>
+	     </property>
+	     <property name="username">
+	        <column name="user_name"/>
+	     </property>
+	     <property name="name">
+	        <column name="name"/>
+	     </property>
+	      <property name="standard_time">
+	        <column name="standard_time"/>
+	     </property>
+	      <property name="lat">
+	        <column name="lat"/>
+	     </property>
+	      <property name="lon">
+	        <column name="lon"/>
+	     </property>
+	     <property name="signalsource">
+	        <column name="signal_source"/>
+	     </property>
+	 </class>
+
+</hibernate-mapping>
+	

@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaac/fft.o: libfaac/fft.c libfaac/fft.h libfaac/util.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\memory.h
+libfaac/fft.c:
+libfaac/fft.h:
+libfaac/util.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:

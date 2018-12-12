@@ -1,0 +1,163 @@
+dojo.declare("Wang.Map.Toolbars", null, {//地图操作工具服务构件
+	trimanmap:null,//Triman.Map
+    navToolbar:null,//导航工具
+	drawToolbar:null,//画图工具
+    editToolbar:null,//编辑工具
+    //存放事件
+    onDrawEndEventHandler: null,
+    onDrawEndCustomEventHandler: null,
+    onEditMoveEndCustomEventHandler: null,
+    //--------------
+    isShowDrawEndGraphic:true,//图形画完后是否显示
+    //构造函数
+    constructor: function(trimanmap){
+    	this.trimanmap=trimanmap;
+    	dojo.require("esri.toolbars.navigation");
+		dojo.require("esri.toolbars.draw");
+        this.drawToolbar = new esri.toolbars.Draw(this.trimanmap.map,{showTooltips:true});
+        this.navToolbar = new esri.toolbars.Navigation(this.trimanmap.map);
+        if(typeof esri.toolbars.Edit!="undefined"){
+        	this.editToolbar =  new esri.toolbars.Edit(this.trimanmap.map);
+        }
+        this.drawToolbar.setFillSymbol(Triman.Map.Graphic.defaultDrawFillSymbol);
+        this.drawToolbar.setLineSymbol(Triman.Map.Graphic.defaultDrawLineSymbol);
+        this.drawToolbar.setMarkerSymbol(Triman.Map.Graphic.defaultDrawMarkerSymbol);
+        this.drawToolbar.setRespectDrawingVertexOrder(true);
+        this.bindToolbarEvent();
+    },
+    bindToolbarEvent: function(){
+    	dojo.disconnect(this.onDrawEndEventHandler);
+        this.onDrawEndEventHandler = dojo.connect(this.drawToolbar, "onDrawEnd", this, function(g){
+			this.drawToolbar.deactivate();
+            if(g&&this.isShowDrawEndGraphic){
+            	this.addDrawToMap(g);
+			}
+        });
+    },
+    //自定义绑定Draw事件
+    bindDrawEndEventCustom: function(callback,self){
+    	dojo.disconnect(this.onDrawEndEventHandler);
+    	dojo.disconnect(this.onDrawEndCustomEventHandler);
+        this.onDrawEndCustomEventHandler = dojo.connect(this.drawToolbar, "onDrawEnd", this, function(g){
+			this.drawToolbar.deactivate();
+			this.navToolbar.deactivate();
+			dojo.disconnect(this.onDrawEndCustomEventHandler);
+       		this.bindToolbarEvent();
+            if(g){
+				callback(g,self);
+			}
+        });
+    },
+    //手动解除
+    cancelDrawEndEventCustom :function(){
+    	this.drawToolbar.deactivate();
+    	this.navToolbar.deactivate();
+		dojo.disconnect(this.onDrawEndCustomEventHandler);
+     	this.bindToolbarEvent();
+    },
+    bindEditMoveEndEventCustom : function(callback){
+    	dojo.disconnect(this.onEditMoveEndCustomEventHandler);
+        this.onEditMoveEndCustomEventHandler = dojo.connect(this.editToolbar, "onGraphicMoveStop", this, 
+        	function(graphic, transform){
+	            if(graphic){
+					callback(graphic.geometry);
+				}
+        	}
+        );
+    },
+    draw: function(drawType){
+    	this.navToolbar.deactivate();
+        switch (drawType) {
+        	case "point":
+                this.drawToolbar.activate(esri.toolbars.Draw.POINT);
+                break;
+            case "multi_point":
+                this.drawToolbar.activate(esri.toolbars.Draw.MULTI_POINT);
+                break;
+            case "line":
+                this.drawToolbar.activate(esri.toolbars.Draw.LINE);
+                break;
+            case "polyline":
+                this.drawToolbar.activate(esri.toolbars.Draw.POLYLINE);
+                this.navToolbar.activate(esri.toolbars.Navigation.PAN);
+                break;
+            case "polygon":
+                this.drawToolbar.activate(esri.toolbars.Draw.POLYGON);
+                this.navToolbar.activate(esri.toolbars.Navigation.PAN);
+                break;
+            case "freehand_polyline":
+                this.drawToolbar.activate(esri.toolbars.Draw.FREEHAND_POLYLINE);
+                break;
+            case "freehand_polygon":
+                this.drawToolbar.activate(esri.toolbars.Draw.FREEHAND_POLYGON);
+                break;
+            case "arrow":
+                this.drawToolbar.activate(esri.toolbars.Draw.ARROW);
+                break;
+            case "triangle":
+                this.drawToolbar.activate(esri.toolbars.Draw.TRIANGLE);
+                break;
+            case "circle":
+            	this.drawToolbar.activate(esri.toolbars.Draw.CIRCLE);
+                break;
+            case "ellipse":
+            	this.drawToolbar.activate(esri.toolbars.Draw.ELLIPSE);
+                break;
+            case "extent":
+                this.drawToolbar.activate(esri.toolbars.Draw.EXTENT);
+                break;
+            case "deactivate":
+                this.drawToolbar.deactivate();
+                this.navToolbar.deactivate();
+                break;
+            default:
+                break;
+        }
+        this.trimanmap.map.enableScrollWheelZoom();
+    },
+    navigate: function(navType){
+        switch (navType) {
+            case "zoomIn":
+                this.navToolbar.activate(esri.toolbars.Navigation.ZOOM_IN);
+                break;
+            case "zoomOut":
+                this.navToolbar.activate(esri.toolbars.Navigation.ZOOM_OUT);
+                break;
+            case "fullExtent":
+                this.navToolbar.zoomToFullExtent();
+                break;
+            case "zoomPrev":
+                this.navToolbar.zoomToPrevExtent();
+                break;
+            case "zoomNext":
+                this.navToolbar.zoomToNextExtent();
+                break;
+            case "pan":
+                this.navToolbar.activate(esri.toolbars.Navigation.PAN);
+                break;
+            case "print":
+	    		var pwin = window.open("print/mapprint.html" , "print", "height="+ (parseInt(this.trimanmap.map.height))  +"px, width="+  (parseInt(this.trimanmap.map.width)) +"px, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no" );
+	 			break;
+            case "deactivate":
+                this.navToolbar.deactivate();
+                this.drawToolbar.deactivate();
+                break;
+            default:
+            
+        }
+        this.trimanmap.map.enableScrollWheelZoom();
+    },
+    addDrawToMap:function(g){
+    	var symbol,graphic;
+		if (g.type=="polygon"||g.type=="extent"){
+			symbol=Triman.Map.Graphic.defaultDrawFillSymbol;
+		}else if(g.type=="polyline"){
+			symbol=Triman.Map.Graphic.defaultDrawLineSymbol; 
+		}else if(g.type=="point"||g.type=="multipoint"){
+			symbol=Triman.Map.Graphic.defaultDrawMarkerSymbol;
+		}
+		graphic=new esri.Graphic(g, symbol);
+		graphic.setAttributes({catoId:"draw"});
+		this.trimanmap.map.graphics.add(graphic);
+    }
+});

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 加载包中的controller 注解扫描包 -->
+	<context:component-scan base-package="cn.mlight.*" />
+	<!-- 开启注解 -->
+	<mvc:annotation-driven />
+	<bean id="settingProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:settings.properties</value>
+				<value>classpath*:db.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="properties" ref="settingProperties" />
+	</bean>
+
+	<!-- c3p0链接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="jdbcUrl" value="${jdbcUrl}"></property>
+		<property name="driverClass" value="${driverClass}"></property>
+		<property name="user" value="${user}"></property>
+		<property name="password" value="${password}"></property>
+		<!--初始化时获取三个连接，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+		<property name="initialPoolSize" value="${initialPoolSize}"></property>
+		<!--连接池中保留的最小连接数。Default: 3 -->
+		<property name="minPoolSize" value="3"></property>
+		<!--连接池中保留的最大连接数。Default: 15 -->
+		<property name="maxPoolSize" value="${maxPoolSize}"></property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement" value="3"></property>
+		<!--最大空闲时间，1800秒内未使用则连接被丢弃，若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="1800"></property>
+	</bean>
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+				<prop key="javax.persistence.validation.mode">none</prop>
+			</props>
+		</property>
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:cn/mlight/domain/*.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 事物管理 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 事物通知 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="list*" read-only="true" />
+			<tx:method name="query*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="save*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="*" rollback-for="Throwable" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- aop配置控制事务得类 -->
+	<aop:config>
+		<!-- <aop:pointcut expression="execution(* cn.Roy..service.impl.*.*(..))" 
+			id="serviceOperation"/> -->
+		<aop:pointcut expression="bean(*Service)" id="serviceOperation" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
+	</aop:config>
+	<!-- 真正可以产生Connection的ConnectionFactory，由对应的 JMS服务厂商提供 -->
+	<bean id="ConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="${mq.brokderURL}" />
+	</bean>
+
+	<!-- 使用数据连接池 -->
+	<bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
+		destroy-method="stop">
+		<property name="connectionFactory" ref="ConnectionFactory"></property>
+		<property name="maxConnections" value="5"></property>
+		<property name="maximumActiveSessionPerConnection" value="300"></property>
+	</bean>
+
+	<!-- apptzgg消息队列,用于向对方发送消息 -->
+	<bean id="apptzgg" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg>
+			<value>tzggtopic</value>
+		</constructor-arg>
+	</bean>
+	<bean id="querydzwl" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg>
+			<value>dzwltopic</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="queryjjqy" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg>
+			<value>jjyqTopic</value>
+		</constructor-arg>
+	</bean>
+ 
+ 	<bean id="querygztc" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg>
+			<value>gztcTopic</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- mainWebDestination消息队列,用于接收对方发送的消息 -->
+	<!-- <bean id="mainWebDestination" class="org.apache.activemq.command.ActiveMQTopic"> 
+		<constructor-arg> <value>xxsbtopic</value> </constructor-arg> </bean> -->
+	<bean id="addmeetingDestination" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg>
+			<value>addmeeting</value>
+		</constructor-arg>
+	</bean>
+	<!-- 消息监听器 -->
+	<bean id="appJmsReceiveListener" class="com.mlight.jms.AppJmsMessageListener">
+
+	</bean>
+	<bean id="AddmeetingJms" class="com.mlight.jms.AddMeetingJms">
+
+	</bean>
+	<bean id="AdddzwlJms" class="com.mlight.jms.AddMeetingJms">
+
+	</bean>
+	<!-- 通知公告 给app的消息发送模板 -->
+	<bean id="appJmsSendTempl" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="pooledConnectionFactory"></property>
+		<property name="defaultDestination" ref="apptzgg"></property>
+		<!-- NON_PERSISTENT非持久化 1 ，PERSISTENT持久化 2 -->
+		<property name="deliveryMode" value="2" />
+		<property name="sessionTransacted" value="true" />
+		<property name="sessionAcknowledgeModeName" value="AUTO_ACKNOWLEDGE" />
+	</bean>
+	<bean id="dzwlJmsSendTempl" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="pooledConnectionFactory"></property>
+		<property name="defaultDestination" ref="querydzwl"></property>
+		<!-- NON_PERSISTENT非持久化 1 ，PERSISTENT持久化 2 -->
+		<property name="deliveryMode" value="2" />
+		<property name="sessionTransacted" value="true" />
+		<property name="sessionAcknowledgeModeName" value="AUTO_ACKNOWLEDGE" />
+	</bean>
+
+	<bean id="jjqyJmsSendTempl" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="pooledConnectionFactory"></property>
+		<property name="defaultDestination" ref="queryjjqy"></property>
+		<!-- NON_PERSISTENT非持久化 1 ，PERSISTENT持久化 2 -->
+		<property name="deliveryMode" value="2" />
+		<property name="sessionTransacted" value="true" />
+		<property name="sessionAcknowledgeModeName" value="AUTO_ACKNOWLEDGE" />
+	</bean>
+	
+	<bean name="gztcJmsSendTempl" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="pooledConnectionFactory"></property>
+		<property name="defaultDestination" ref="querygztc"></property>
+		<!-- NON_PERSISTENT非持久化 1 ，PERSISTENT持久化 2 -->
+		<property name="deliveryMode" value="2" />
+		<property name="sessionTransacted" value="true" />
+		<property name="sessionAcknowledgeModeName" value="AUTO_ACKNOWLEDGE" />
+	</bean>
+	
+	<!-- JMS消息容器 -->
+	<!-- <bean id="jmsContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> 
+		<property name="connectionFactory" ref="pooledConnectionFactory" /> <property 
+		name="destination" ref="mainWebDestination" /> <property name="messageListener" 
+		ref="appJmsReceiveListener" /> <property name="sessionTransacted" value="true" /> 
+		</bean> -->
+		
+	<bean id="addmeeting"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="pooledConnectionFactory" />
+		<property name="destination" ref="addmeetingDestination" />
+		<property name="messageListener" ref="AddmeetingJms" />
+		<property name="sessionTransacted" value="true" />
+	</bean>
+	
+	<!-- 消息 -->
+	<bean id="messageDao" class="cn.mlight.dao.impl.MessageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loginDao" class="cn.mlight.dao.impl.LoginDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="deviceDao" ref="deviceDao" />
+	</bean>
+	<bean id="mapDao" class="cn.mlight.dao.impl.MapDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="chatDao" class="cn.mlight.dao.impl.ChatDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="taskDao" class="cn.mlight.dao.impl.TaskDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="deviceDao" class="cn.mlight.dao.impl.DeviceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 通知公告 -->
+	<bean id="tzggDao" class="cn.mlight.dao.impl.TzggDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 跟控任务 -->
+	<bean id="gkrwDao" class="cn.mlight.dao.impl.GkrwDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- <bean id="downLoadServletBean" class="com.mlight.jms.AppJmsMessageListener"> 
+		</bean> -->
+	<!-- <bean id="gisdwzlServletBean" class="com.mlight.gis.Querydzwl"> </bean> -->
+	<bean id="proxyListener" class="com.mlight.chat.webclient.ProxyClientListener"
+		scope="singleton">
+		<property name="valImHost" value="${imHost}" />
+		<property name="valImPort" value="${im-port}" />
+		<property name="valConnectTimeout" value="${im-connect-timeout}" />
+		<property name="valDefaultTimeout" value="${im-default-timeout}" />
+		<property name="valDefaultReceiver" value="${default-receiver}" />
+		<property name="valPingInterval" value="${im-ping-interval}" />
+		<property name="valAccessUrl" value="${accessUrl}" />
+		<property name="valUploadUrl" value="${uploadUrl}" />
+		<property name="valArcgisUrl" value="${arcgisUrl}" />
+		<property name="remoteHost" value="${hostip}" />
+		<property name="jksPath" value="${jkspath}" />
+		<property name="jksPswd" value="${jks.pswd}" />
+	</bean>
+	<!-- jdbc -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+		abstract="false" lazy-init="false" autowire="default">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!-- 包装实际执行 -->
+	<bean id="taskBean"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="GisdzwlAction"></property>
+		<property name="targetMethod" value="queryjjqy"></property>
+		<property name="concurrent" value="false" />
+	</bean>
+	<bean id="GisdzwlAction" class="com.mlight.gis.Queryjjqy"> </bean>
+	
+	
+	<!-- 感知图层包装实际执行 -->
+	  <bean id="taskBeanGztc" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		 <property name="targetObject" ref="GisGztcAction"></property>
+		 <property name="targetMethod"  value="queryGztc"></property> 
+		 <property name="concurrent" value="false" /> 
+	  </bean> 
+	  <bean id="GisGztcAction" class="com.mlight.gis.QueryGztc"> </bean> 
+	
+	 <!--定义触发的时间 -->
+	<bean id="cronTriggerGztc" class="org.springframework.scheduling.quartz.CronTriggerBean"> 
+		<property name="jobDetail" ref="taskBeanGztc" /> 
+		<!--     每十秒执行一次  -->
+		<property name="cronExpression" value="0/15 * * * * ? *" />
+	</bean>
+	
+	<!--定义触发的时间 -->
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="taskBean" />
+		<!-- 每十秒执行一次 -->
+		<property name="cronExpression" value="0/15 * * * * ? *" />
+	</bean>
+
+		
+	<bean id="JmstjfxAction" class="cn.mlight.action.JmstjfxAction">
+	</bean>
+	<!-- 统计分析插入 -->
+	<bean id="taskBeanTjfx"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="JmstjfxAction"></property>
+		<property name="targetMethod" value="insertmsg"></property>
+		<property name="concurrent" value="false" />
+	</bean>
+	<!--统计分析定义触发的时间 -->
+	<bean id="cronTriggerTjfx" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="taskBeanTjfx" />
+		<!-- 每两小时执行一次 --> 
+		<property name="cronExpression" value="0 0 0/2 * * ? *" />
+	</bean>
+	<!--触发器 -->
+	<bean autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+			<!-- 	<ref bean="cronTrigger" />
+				  <ref bean="cronTriggerGztc" />  
+				<ref bean="cronTriggerTjfx" /> -->
+				
+			</list>
+		</property>
+	</bean>
+	<import resource="spring-thrift-admin.xml" />
+	<!-- 文件上传桥 -->
+	<bean id="uploadBridge" class="com.mlight.bridge.UploadBridge"
+		scope="prototype">
+		<property name="encryptKey" value="${encrypt.key}"></property>
+		<property name="viKey" value="${vikey.id}"></property>
+		<property name="protocol" value="${upload.protocol}"></property>
+		<property name="host" value="${upload.host}"></property>
+		<property name="port" value="${upload.port}"></property>
+		<property name="uri" value="${upload.uri}"></property>
+	</bean>
+	<!-- 二维码生成 、等spring加载完自动执行一次改方法 -->
+	<!-- <bean id="loadReSource" class="cn.mlight.action.HomeAction" init-method="QR_Create"></bean> -->
+</beans>

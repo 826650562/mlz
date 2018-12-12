@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaac/util.o: libfaac/util.c libfaac/util.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\memory.h libfaac/coder.h
+libfaac/util.c:
+libfaac/util.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:
+libfaac/coder.h:

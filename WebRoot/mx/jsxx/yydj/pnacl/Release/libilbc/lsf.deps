@@ -1,0 +1,4 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/lsf.o: libilbc/lsf.cpp libilbc/iLBC_define.h
+libilbc/lsf.cpp:
+libilbc/iLBC_define.h:

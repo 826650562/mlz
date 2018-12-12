@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/XRttCount.o: XRttCount.cpp XRttCount.h XDelay.h NetConfig.h
+XRttCount.cpp:
+XRttCount.h:
+XDelay.h:
+NetConfig.h:

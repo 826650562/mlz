@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/gainquant.o: libilbc/gainquant.cpp \
+  libilbc/constants.h libilbc/iLBC_define.h libilbc/filter.h
+libilbc/gainquant.cpp:
+libilbc/constants.h:
+libilbc/iLBC_define.h:
+libilbc/filter.h:

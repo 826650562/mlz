@@ -1,0 +1,34 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/huffman.o: libfaad/huffman.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/structs.h libfaad/cfft.h libfaad/sbr_dec.h \
+  libfaad/ps_dec.h libfaad/bits.h libfaad/analysis.h libfaad/huffman.h \
+  libfaad/codebook/hcb.h libfaad/codebook/hcb_1.h \
+  libfaad/codebook/hcb_2.h libfaad/codebook/hcb_3.h \
+  libfaad/codebook/hcb_4.h libfaad/codebook/hcb_5.h \
+  libfaad/codebook/hcb_6.h libfaad/codebook/hcb_7.h \
+  libfaad/codebook/hcb_8.h libfaad/codebook/hcb_9.h \
+  libfaad/codebook/hcb_10.h libfaad/codebook/hcb_11.h \
+  libfaad/codebook/hcb_sf.h
+libfaad/huffman.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/structs.h:
+libfaad/cfft.h:
+libfaad/sbr_dec.h:
+libfaad/ps_dec.h:
+libfaad/bits.h:
+libfaad/analysis.h:
+libfaad/huffman.h:
+libfaad/codebook/hcb.h:
+libfaad/codebook/hcb_1.h:
+libfaad/codebook/hcb_2.h:
+libfaad/codebook/hcb_3.h:
+libfaad/codebook/hcb_4.h:
+libfaad/codebook/hcb_5.h:
+libfaad/codebook/hcb_6.h:
+libfaad/codebook/hcb_7.h:
+libfaad/codebook/hcb_8.h:
+libfaad/codebook/hcb_9.h:
+libfaad/codebook/hcb_10.h:
+libfaad/codebook/hcb_11.h:
+libfaad/codebook/hcb_sf.h:

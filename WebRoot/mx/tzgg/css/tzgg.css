@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+.tzgg_title{width:320px; height:42px; line-height:42px; padding:0px 15px; font-size:14px; font-weight:bold; background:#fff;box-shadow: 0px 2px 2px #ccc;
+-webkit-box-shadow: 0px 2px 2px #ccc;
+-moz-box-shadow: 0px 2px 2px #ccc;}
+
+
+
+
+
+
+.tzgg_box{width:350px; position:absolute;top:44px; bottom:101px; left:0px;right:0px; overflow-y: auto;overflow-x: hidden;}
+.tzgg_box ul{margin:0px; float:left;width:330px; padding:10px 10px 0px 10px;}
+.tzgg_box ul li{width:298px; float:left; padding:15px; border:1px solid #e2e2e2;border-radius:2px; background:#fff; margin-bottom:10px;}
+.tzgg_box ul li:hover{background:#f0f3f8; cursor:pointer;transition:background-color 0.3s ease-in; border:1px solid #dce6f7;}
+
+
+.tzgg_name{width:298px; padding:5px 0px; font-size:15px; font-weight:bold; float:left;}
+.tzgg_cont{width:298px; float:left; padding:0px 0px 10px 0px;}
+
+.tzgg_time{width:298px;float:left; height:24px; line-height:34px;}
+.tzgg_zuozhe{width:200px;float:left;height:24px; line-height:24px;}
+.tzgg_zuozhe span{float:left; display:block;}
+.tzgg_zuozhe span:nth-child(2){width:140px;}
+.tzgg_caozuo{ float:right; color:#417bdc;height:24px; line-height:24px;}
+.tzgg_caozuo span:nth-child(1){padding:0px 5px;float:left;}
+.tzgg_caozuo span:nth-child(2){ float:left; cursor:pointer;}
+.tzgg_txt_title{width:100%; float:left; height:20px;padding:0px 0px 10px 0px;}
+.checkTitleName{width:250px; float:left; height:24px; line-height:24px; font-weight:bold;}
+.checkTitleInput{width:20px; height:20px; float:left; padding:0px 5px 0px 0px;}
+.tzgg_imgBox{ float:left;}
+.tzgg_imgcont{width:90px; float:left;border-radius:3px;}
+.tzgg_imgcont img{border-radius:3px; border:1px solid #e2e2e2; width:100%;}
+.tzgg_imgNum{ float:left;padding:50px 0px 0px 5px;}
+.tzgg_imgcont:hover{opacity:0.9;}
+.tzgg_imgcont:active{opacity:1;}
+.tzgg_bottombox{    width: 320px; height: 50px;padding: 0px 15px;position: absolute; bottom: 0px; left: 0px;border-top: 1px solid #e2e2e2; background:#fff;}	
+.tzgg_newgg{width:152px; padding:5px 8px 0px 0px; float:left; height:50px;}
+.tzgg_newgg .layui-btn .layui-icon {font-size:18px;}
+.tzgg_delgg{width:152px; padding:5px 0px 0px 8px;float:left; height:50px;}
+.tzgg_delgg button,.tzgg_newgg button{width:100%;}
+.tzgg_delgg .layui-btn .layui-icon {font-size:18px;}
+.tzgg_new_cont{width:570px;padding:15px;}
+.fuwenben{width:100%; float:left;}
+.tzgg_pagesbox {
+    width: 320px;
+    height: 50px;
+    padding: 0px 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    border-top: 1px solid #e2e2e2;
+	 background:#fff;
+	 border-bottom:1px solid #e2e2e2;
+}
+
+
+
+
+
+

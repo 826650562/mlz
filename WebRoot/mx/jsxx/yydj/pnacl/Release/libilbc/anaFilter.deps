@@ -1,0 +1,5 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/anaFilter.o: libilbc/anaFilter.cpp \
+  libilbc/iLBC_define.h
+libilbc/anaFilter.cpp:
+libilbc/iLBC_define.h:

@@ -1,0 +1,408 @@
+
+/***nav start***/
+.cd-dropdown-wrapper {display: inline-block;position: relative;height: 47px;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.cd-dropdown-trigger {display: block;position: relative;color: #ffffff;padding:5px; border-radius:5px;}
+.cd-dropdown-trigger:hover{ box-shadow:inset 0px 0px 2px #40494d,0px 0px 1px #000;background-image:linear-gradient(top,#3b4448,#2c3438);
+    background-image:-o-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-moz-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-ms-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-webkit-linear-gradient(top,#3b4448,#2c3438);}
+
+.cd-dropdown { width:200px;height:215px; position: absolute;top:50px;right:-10px;
+    -webkit-transform: translateX(0);-moz-transform: translateX(0);-ms-transform: translateX(0);-o-transform: translateX(0);transform: translateX(0);
+    background-color: #ffffff;color: #111433;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);opacity: 0;
+    -webkit-transform: translateY(30px);-moz-transform: translateY(30px);-ms-transform: translateY(30px);-o-transform: translateY(30px);transform: translateY(30px);
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;-moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;z-index:-110;
+  }
+
+.hoveActive{ box-shadow:inset 0px 0px 2px #40494d,0px 0px 1px #000;background-image:linear-gradient(top,#3b4448,#2c3438);
+    background-image:-o-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-moz-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-ms-linear-gradient(top,#3b4448,#2c3438);
+    background-image:-webkit-linear-gradient(top,#3b4448,#2c3438);}
+
+.cd-dropdown.dropdown-is-active {width:200px;height:175px;opacity: 1;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);
+    -o-transform: translateY(0);transform: translateY(0);
+    -webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;-moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;z-index:999;
+  }
+.cd-dropdown-content li{height:43px; line-height:43px;}
+.cd-dropdown-content li a{ text-decoration:none; display:block; padding:0px 10px 0px 10px;font-size:14px;color:#22292c; overflow:hidden;height:43px;}
+.cd-dropdown-content li a:hover{color:#f7971e;
+
+
+
+    background-image:linear-gradient(top,#eee,#f3f3f3);
+    background-image:-o-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-moz-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-ms-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-webkit-linear-gradient(top,#eee,#f3f3f3);
+
+
+
+
+}
+.navXtb{width:14px;height:14px; float:left;padding:15px 10px 13px 8px;}
+.selfCheckbox{width:14px;height:14px; float:left;padding:15px 0px 13px 0px;}
+
+/***nav end***/
+.main{overflow: hidden;position: absolute;margin: 0px;left: 0px;right: 0px;height: auto;top: 70px;bottom: 0px;width: 100%;display: block;
+    visibility: visible;background: #eee;}
+	
+/*-----------historyChatQueryBox-----------*/
+.historyChatQueryBox{width:350px;height:650px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:80px;right:225px; background:#fff;
+opacity: 0;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;z-index:-110;
+} 
+.navContentActive{width:350px;height:650px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:80px;right:225px; background:#fff;
+    opacity: 1; z-index:110;}
+
+.historyChatQueryTitle{width:350px;height:35px; float:left; cursor:move;
+background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+}
+.historyChatQueryTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:250px; overflow:hidden;}
+.historyChatQueryTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.historyChatQueryLine{width:350px;height:2px; float:left; background:#f7971e;} 
+.historyChatQuerySearch{width:330px; height:123px; float:left;padding:0px 10px 0px 10px;}
+.historyChatQuerySearch .timeInputBox{width:330px; float:left; height:40px;}
+.historyChatQuerySearch .timeLaberl{width:80px;float:left; height:40px; line-height:40px; overflow:hidden;}
+.historyChatQuerySearch .timeInput{width:250px;float:left; height:30px; line-height:40px;padding:5px 0px 5px 0px;}
+.historyChatQuerySearch .timeTxt{width:228px;float:left; padding:0px 10px 0px 10px; height:28px; line-height:28px;border:1px solid #ddd; cursor:pointer;}
+.historyChatQuerySearch .searchBox{width:330px; float:left; height:40px;}
+.historyChatQuerySearch .searchInput{width:250px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 0px;}
+.historyChatQuerySearch .searchBtnBox{width:60px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 10px;}
+.historyChatQuerySearch .searchBtn{width:70px;height:30px; line-height:30px; background:#f7971e;color:#fff; text-align:center;border:none; cursor:pointer;font-size:14px;}
+
+.contactPeoList{width:350px; height:440px; float:left; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.contactPeoList ul{padding:0px;margin:0px;}
+.contactPeoList ul li{width:350px; height:60px; float:left;}
+.contactPeoListImg{width:40px;height:40px; float:left;padding:10px;}
+.contactPeoListImg img{width:40px;height:40px; float:left;}
+.contactZuName{width:280px;height:60px; line-height:60px;color:#666; font-size:14px; float:left; overflow:hidden;}
+.contactPeoName{width:70px;height:60px; line-height:60px;color:#666; font-size:14px; float:left; overflow:hidden;}
+.peoImgAndName{width:143px;height:60px; float:left;}
+
+.rightContactPeoName{width:70px;height:60px; line-height:60px;color:#666; font-size:14px; float:right; overflow:hidden; text-align:right;}
+.rightPeoImgAndName{width:143px;height:60px; float:right;}
+.rightContactPeoListImg{width:40px;height:40px; float:right;padding:10px;}
+.contactArrowXtb{width:60px;height:60px; float:left;}
+
+.pageBox{width:100%;height:48px; float:left;}
+.pageLeft{width:160px;height:20px; padding:14px; float:left;}
+/*********.pageLeft ul{height:20px; float:left;}
+.pageLeft ul li{ height:20px; width:20px; float:left; text-align:center; font-size:14px; margin-right:10px;}*********/
+.pageLeft a{ height:20px; width:20px; float:left; display:block;}
+.pageLeft a:hover{ height:20px; width:20px; float:left; display:block; background:#eee; border-radius:2px;}
+.pageRight{width:120px; padding:14px; height:20px; line-height:20px; text-align:right; float:right; overflow:hidden;}
+.pageLeft .numberdiv{width: 30px;float: left;text-align: center;}
+.jpLiHover{background:#f3f3f3; cursor:pointer;}
+
+/*------------layerHistoryDetailed start-----------*/
+.layerHistoryDetailed{width:425px;height:650px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:110px;right:250px; background:#fff;
+opacity: 0;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;z-index:-110;}
+.layerHistoryDetailedActive{width:425px;height:650px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:110px;right:250px; background:#fff;
+    opacity: 1; z-index:110;}
+
+
+.historyDetailedTitle{width:425px;height:35px; float:left; cursor:move;
+
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+
+}
+.historyDetailedTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:250px; overflow:hidden;}
+.historyDetailedTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.historyDetailedLine{width:425px;height:2px; float:left; background:#f7971e;} 
+
+.historyChatList{width:425px; height:563px; float:left; border-top:1px solid #ddd; border-bottom:1px solid #ddd; outline:none;}
+.historyChatList ul{padding:0px;margin:0px; float:left;}
+.historyChatList ul li{ float:left;width:425px; float:left; margin:5px 0px 5px 0px;}
+.historyChatList ul li .peoInfo{width:425px; height:30px; line-height:30px; float:left;}
+.historyChatList ul li .peoName{ max-width:100px;height:30px; line-height:30px; float:left; overflow:hidden;padding:0px 12px 0px 12px;}
+.historyChatList ul li .historyChatTime{float:left;height:30px; line-height:30px;color:#999;}
+.historyChatInfo{padding:0px 12px 0px 50px; line-height:22px; float:left;}
+.historyLocation{width:39px;height:33px; float:left;}
+.historyLocation img{cursor:pointer;}
+.historyAudio{width:39px;height:33px; float:left;}
+<<<<<<< HEAD
+.historyAudioTime{height:33px; line-height:33px; float:left;padding:0px 10px 0px 10px;}
+=======
+.historyAudioTimeLeft{height:33px; line-height:33px; float:left;padding:0px 10px 0px 10px;}
+.historyAudioTimeRight{height:33px; line-height:33px; float:right;padding:0px 10px 0px 10px;}
+>>>>>>> 700c8a2805f221d9f3b6b582cdd2f69ec16ad4a2
+.historyAudio img{cursor:pointer;}
+.historyManyImgInfo{padding:0px 12px 0px 50px;  float:left;}
+.historyManyImgInfo span{width:50px;height:50px; padding:0px 7px 7px 0px; float:left;}
+.historyManyImgInfo span img{cursor:pointer;}
+.historyOneImgInfo{padding:0px 12px 0px 50px;  float:left;}
+.historyOneImgInfo img{width:120px;height:80px; cursor:pointer;}
+
+/*------------layerControl start-----------*/
+.layerControl{width:250px;height:400px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:80px;right:275px; background:#fff;
+opacity: 0;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;z-index:-110;}
+.layerControlActive{width:250px;height:400px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:80px;right:275px; background:#fff;
+    opacity: 1; z-index:110;}
+
+.layerControlTitle{width:250px;height:35px; float:left; cursor:move;
+
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+
+}
+.layerControlTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:150px; overflow:hidden;}
+.layerControlTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.layerControlLine{width:250px;height:2px; float:left; background:#f7971e;} 
+
+.layerControlBox{width:250px;height: 335px; float:left;}
+
+/*------------historyPathQuery start-----------*/
+.historyPathQuery{width:270px;height:650px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:110px;right:300px; background:#fff;
+opacity: 0;z-index:-110;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;}
+.historyPathQueryActive{width:500px;height:650px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:110px;right:300px; background:#fff;
+    opacity: 1; z-index:110;}
+
+
+.historyPathQueryTitle{width:500px;height:35px; float:left; cursor:move;
+
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+
+}
+.historyPathQueryTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:150px; overflow:hidden;}
+.historyPathQueryTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.historyPathQueryLine{width:500px;height:2px; float:left; background:#f7971e;}
+
+.historyPathQuerySearch{width:500px; float:left;padding:5px 10px 5px 10px;
+    box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.historyPathQuerySearch .timeInputBox{ float:left; height:40px;}
+.historyPathQuerySearch .timeLaberl{float:left; height:40px; line-height:40px; overflow:hidden;}
+.historyPathQuerySearch .timeInput{width:155px;float:left; height:30px; line-height:40px;padding:5px 0px 5px 0px;}
+.historyPathQuerySearch .timeTxt{width:133px;float:left; padding:0px 10px 0px 10px; height:28px; line-height:28px;border:1px solid #ddd; cursor:pointer;}
+.historyPathQuerySearch .searchTxt{width:376px;float:left; padding:0px 10px 0px 10px; height:28px; line-height:28px;border:1px solid #ddd; }
+.historyPathQuerySearch .searchBox{width:100%; float:left; height:40px;}
+.historyPathQuerySearch .searchInput{width:398px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 0px;}
+.historyPathQuerySearch .searchBtnBox{width:71px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 10px;}
+.historyPathQuerySearch .searchBtn{width:70px;height:30px; line-height:30px; background:#f7971e;color:#fff; text-align:center;border:none; cursor:pointer;font-size:14px;}
+.historyPathQuerySearch .checkBoxMain{width:470px; padding:5px 5px 5px 5px; float:left;}
+.CheckMain{padding-right:30px; float:left;}
+.CheckMain input[type="checkbox"]{margin-top:5px;}
+
+.historyPathQueryList{width:500px;  float:left; border-top:1px solid #ddd; padding:5px 10px 5px 10px; outline:none;}
+.historyPathQueryList ul{padding:0px;margin:0px;}
+.historyPathQueryList ul li{width:100%; float:left;}
+.historyPathCheck{width:20px; float:left; padding:17px 15px 15px 15px;}
+.historyPathDetailBox{width:440px; float:left; padding:10px 10px 10px 0px;border-bottom:1px solid #ddd;}
+.historyPathPeoName{width:440px; float:left; height:25px; line-height:25px;color:#f7971e;}
+.historyPathDetail{width:440px; float:left; line-height:22px;}
+.historyPathDetail span{padding-right:20px; float:left;}
+
+.pathPlay{width:70px;height:30px; line-height:30px; background:#f7971e;color:#fff; text-align:center;border:none; cursor:pointer;font-size:14px; margin-top:8px; float:right;}
+
+/*------------chatwindow start-----------*/
+.chatWindow{width:800px;height:620px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:80px;right:325px; background:#fff;
+opacity: 0;z-index:-110;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;}
+.chatWindowActive{width:800px;height:620px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:80px;right:325px; background:#fff;opacity: 1; z-index:110;}
+
+.chatWindowTitle{width:800px;height:35px; float:left; cursor:move;
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+}
+.chatWindowTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:150px; overflow:hidden;}
+.chatWindowTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.HideXtb:hover{ background-image:linear-gradient(top,#eee,#f3f3f3);
+    background-image:-o-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-moz-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-ms-linear-gradient(top,#eee,#f3f3f3);
+    background-image:-webkit-linear-gradient(top,#eee,#f3f3f3);border-left:1px solid #ddd;}
+.chatWindowLine{width:800px;height:2px; float:left; background:#f7971e;}
+.chatWindowLeft{width:230px; height:583px; float:left; }
+.chatWindowRight{width:569px; border-left:1px solid #ddd; height:583px; float:left; }
+.chatWindowPeoName{width:100%;height:35px; line-height:35px;border-bottom:1px solid #ddd; float:left; text-align:center;}
+.chatWindowchatBox{width:100%;height:390px; float:left; border-bottom:1px solid #ddd; outline:none;}
+.chatWindowchatBox ul{padding:0px;margin:0px; float:left;}
+.chatWindowchatBox ul li{ float:left;width:100%; float:left; margin:5px 0px 5px 0px;}
+.chatWindowchatBox ul li .peoInfo{width:568px; height:30px; line-height:30px; float:left;}
+.chatWindowchatBox ul li .peoName{ max-width:100px;height:30px; line-height:30px; float:left; overflow:hidden;padding:0px 12px 0px 12px;}
+.chatWindowchatBox ul li .nowChatTime{float:left;height:30px; line-height:30px;color:#999;font-size:12px;}
+.chatWindowchatBox ul li.sender .peoName,.chatWindowchatBox ul li.sender .nowChatTime,.chatWindowchatBox ul li.sender .msg .ctn{ float:right;}
+.chatWindowchatBox ul li.sender .msg .ctn{margin-left: 0px;margin-right: 50px;}
+.chatWindowchatBox ul li.sender .nowChatInfo{float:right;margin-right:50px; border-radius:5px;} /**  background:#f3f3f3; */
+.chatWindowchatBox ul li.sender .nowChatInfoRight{float:right; position:relative;color:#333; background:#b2e281;word-break:break-all;-webkit-word-break:break-all; border-radius:5px;margin-right:50px; padding:5px 10px 5px 10px; max-width: 400px;}
+.chatWindowchatBox ul li.sender .nowChatInfoRight .qipaoJiantouRight{width:15px;height:15px; position:absolute;background:url('../../images/qipaoJiantouRight.png');right:-10px;top:6px;}
+
+
+.nowChatInfo{padding:0px 12px 0px 50px; line-height:22px; float:left;}
+.nowChatLocation{width:39px;height:33px; float:left;}
+.nowChatLocation img{cursor:pointer;}
+.nowChatAudio{width:39px;height:33px; float:left;}
+.nowChatAudioTime{height:33px; line-height:33px; float:left;padding:0px 10px 0px 10px;}
+.nowChatAudio img{cursor:pointer;}
+.nowChatManyImgInfo{padding:0px 12px 0px 50px;  float:left;}
+.nowChatImgInfo span{width:50px;height:50px; padding:0px 7px 7px 0px; float:left;}
+.nowChatManyImgInfo span img{cursor:pointer;}
+.nowChatOneImgInfo{padding:0px 12px 0px 50px;  float:left;}
+.nowChatOneImgInfo img{width:120px;height:80px; cursor:pointer;}
+.chatPostXtbBox{width:100%;height:30px; float:left; background:#f3f3f3;}
+.chatPostTextArea{width:100%;height:91px;  float:left;}
+.chatPostTextArea textarea{width:100%;height:91px;resize:none; outline:none; padding:0px 10px 0px 10px; line-height:22px;border:none; float:left; font-family:Microsoft YaHei;color:#666;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;word-wrap: break-word;}
+.chatPostBtn{width:100%;height:35px; float:left; display:block;border:none; background:#f7971e; color:#fff;}
+.chatPostXtb{width:30px;height:30px; float:left; display:block; margin-left:5px; margin-right:10px; position:relative;}
+.chatInputFile{position: absolute;font-size: 0;width:30px;height:30px;outline: 0; opacity: 0;filter: alpha(opacity=0); z-index: 11;cursor: pointer; top:0px; left:0px;}
+.chatInputFileImg{ position:absolute;top:0px;left:0px; z-index:1;}
+
+
+.historyPeoGroup{width:100%; height:546px; float:left;}
+.historyChatGroup ul{padding:0px;margin:0px;}
+.historyChatGroup ul li{width:230px; height:60px; float:left;}
+.historyChatGroupImg{width:40px;height:40px; float:left;padding:10px;}
+.historyChatGroupImg img{width:40px;height:40px; float:left;}
+.historyChatGroupName{width:160px;height:60px; line-height:60px;color:#666; font-size:14px; float:left; overflow:hidden;}
+
+.tab{width:100%; float:left;}
+.tabNav{width:100%; height:35px; float:left;border-bottom:1px solid #ddd;}
+.tabNav li{width:49%; height:35px; float:left; text-align:center; cursor:pointer;}
+.verticalLineBox{width:2%; float:left; height:25px; padding:5px 0px 5px 0px;}
+.verticalLine{height:25px; width:2px; border-right:1px solid #ddd; float:left;}
+.tabContOne{width:230px; height:547px; float:left;outline:none; }
+.tabContTwo{width:230px; height:547px; float:left; outline:none;}
+
+
+
+/*------------sendTask start-----------*/
+.sendTask{width:450px;height:570px; position:relative;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:80px;right:350px; background:#fff;
+    opacity: 0;z-index:-110;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;}
+.sendTaskActive{width:450px;height:570px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:80px;right:350px; background:#fff;opacity: 1; z-index:110;}
+
+.sendTask .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:150px; overflow:hidden;}
+.sendTask .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.sendTaskLine{width:100%;height:2px; float:left; background:#f7971e;}
+.sendTaskTitle{width:100%;height:35px; float:left; cursor:move;
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+}
+.sendTaskCont{width:100%; float:left;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;padding:10px;}
+.sendTaskCont ul{padding:0px;margin:0px; float:left; width:100%;}
+.sendTaskCont ul li{width:100%; float:left;padding:8px 0px 8px 0px;}
+.sendTaskCont ul li .formLeft{width:25%; float:left;}
+.sendTaskCont ul li .formLeft .formLabel{width:100%; height:30px;line-height:28px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;border-top:1px solid #ddd;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; background:#f3f3f3; text-align:right;color:#333;}
+.sendTaskCont ul li .formLeft .formAreaLabe2{width:100%; height:100px;line-height:98px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;border-top:1px solid #ddd;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; background:#f3f3f3; text-align:right;color:#333;}
+.sendTaskCont ul li .formRight{width:75%; float:left;}
+.sendTaskCont ul li .formRight input[type="text"]{width:100%; float:left; height:30px; padding:0px 10px 0px 10px;border:1px solid #ddd; outline:none; -webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.sendTaskCont ul li .formRight input[type="text"]:focus{border-color: #f7971e;outline: 0;-webkit-box-shadow: inset 0 1px 1px #fdc379,0 0 8px #fff1e0;box-shadow: inset 0 1px 1px #fdc379,0 0 8px #fff1e0;}
+.sendTaskCont ul li .formRight textarea{width:100%; float:left; height:100px; padding:0px 10px 0px 10px;border:1px solid #ddd; outline:none; -webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; resize:none; font-family:Microsoft YaHei;color:#666;}
+.sendTaskCont ul li .formRight textarea:focus{border-color: #f7971e;outline: 0;-webkit-box-shadow: inset 0 1px 1px #fdc379,0 0 8px #fff1e0;box-shadow: inset 0 1px 1px #fdc379,0 0 8px #fff1e0;}
+.sendTaskCont ul li .sendButton{width:100%;height:30px; background:#f7971e;color:#fff;text-align:center; line-height:30px;border:none;}
+.sendTaskCont ul li .sendButton:hover{ background:#ea890f;}
+.sendTaskCont ul li .sendButton:focus{ background:#f7971e;}
+.sendTaskContZindex{width:100%; float:left;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;padding:10px; top:37px; height:533px; background:#fff; position:absolute; z-index:100; display:none;}
+.checkPeo{width:150px; cursor:pointer; float:left; height:30px; line-height:28px; position:relative; padding:0px 10px 0px 10px;border:1px solid #ddd; outline:none; -webkit-box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; overflow:hidden;}
+
+.checkPeoAddXtb{width:150px; cursor:pointer; float:left; height:28px; position:absolute; z-index:90; top:0px;left:0px; display:none; text-align:center;background:#f7971e;}
+.sendTaskClose{padding:5px; position:absolute; right:0px; top:0px; cursor:pointer; background:#f3f3f3; border-left:1px solid #ddd;border-bottom:1px solid #ddd; font-size:12px;}
+
+
+
+
+
+
+
+
+/*------------historyTaskQuery start-----------*/
+.historyTaskQuery{width:500px;height:650px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); position:absolute; top:80px;right:375px; background:#fff;
+    opacity: 0;z-index:-110;-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);
+    transform: translateY(0);-webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;}
+.historyTaskQueryActive{width:500px;height:650px;box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); position:absolute; top:80px;right:375px; background:#fff;
+    opacity: 1; z-index:110;}
+
+
+.historyTaskQueryTitle{width:500px;height:35px; float:left; cursor:move;
+
+    background-image:linear-gradient(top,#f3f3f3,#fff);
+    background-image:-o-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-moz-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-ms-linear-gradient(top,#f3f3f3,#fff);
+    background-image:-webkit-linear-gradient(top,#f3f3f3,#fff);
+
+}
+.historyTaskQueryTitle .myText{color:#22292c;font-size:14px;height:35px; line-height:35px; float:left;padding:0px 12px 0px 12px;width:150px; overflow:hidden;}
+.historyTaskQueryTitle .HideXtb{width:14px;height:15px; float:right; padding:10px; cursor:pointer;}
+.historyTaskQueryLine{width:500px;height:2px; float:left; background:#f7971e;}
+
+.historyTaskQuerySearch{width:480px; float:left;padding:5px 10px 5px 10px;}
+.historyTaskQuerySearch .timeInputBox{ float:left; height:40px;}
+.historyTaskQuerySearch .timeLaberl{float:left; height:40px; line-height:40px; overflow:hidden;}
+.historyTaskQuerySearch .timeInput{width:155px;float:left; height:30px; line-height:40px;padding:5px 0px 5px 0px;}
+.historyTaskQuerySearch .timeTxt{width:133px;float:left; padding:0px 10px 0px 10px; height:28px; line-height:28px;border:1px solid #ddd; cursor:pointer;}
+.historyTaskQuerySearch .searchTxt{width:376px;float:left; padding:0px 10px 0px 10px; height:28px; line-height:28px;border:1px solid #ddd; }
+.historyTaskQuerySearch .searchBox{width:480px; float:left; height:40px;}
+.historyTaskQuerySearch .searchInput{width:398px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 0px;}
+.historyTaskQuerySearch .searchBtnBox{width:71px;float:left; height:30px; line-height:30px;padding:5px 0px 5px 10px;}
+.historyTaskQuerySearch .searchBtn{width:70px;height:30px; line-height:30px; background:#f7971e;color:#fff; text-align:center;border:none; cursor:pointer;font-size:14px;}
+.historyTaskQuerySearch .checkBoxMain{width:470px; padding:5px 5px 5px 5px; float:left;}
+.historyTaskQuerySearch .pageLeft{width:320px; padding:5px 5px 5px 5px; float:left;}
+
+
+.historyTaskQueryList{width:500px; height:442px; float:left; border-top:1px solid #ddd; border-bottom:1px solid #ddd; outline:none;}
+.historyTaskQueryList ul{padding:0px;margin:0px;}
+.historyTaskQueryList ul li{width:500px; float:left;}
+.historyTaskQueryCheck{width:20px; float:left; padding:17px 15px 15px 15px;}
+.historyTaskQueryDetailBox{width:480px; float:left; padding:10px 10px 10px 10px;border-bottom:1px solid #ddd;}
+.historyTaskQueryPeoName{width:100%; float:left; height:25px; line-height:25px;color:#f7971e;}
+.historyTaskQueryDetail{width:100%; float:left; line-height:22px;}
+.historyTaskQueryDetail span{padding-right:20px; float:left;}
+
+.notRead{ position: relative;top: -44px;left: 26px;width: 26px;height: 13px;border-radius: 13px;line-height: 12px;color: white;background-color: red;text-align: center;padding:1px;}
+
+.nowChatInfoLeft {
+    float: left;
+    position: relative;
+    color: #333;
+    background: #b2e281;
+    word-break: break-all;
+    -webkit-word-break: break-all;
+    border-radius: 5px;
+    margin-left: 50px;
+    padding: 5px 10px 5px 10px;
+    max-width: 400px;
+}
+.nowChatInfoLeft .qipaoJiantouLeft {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: url('../../images/qipaoJiantouLeft.png');
+    left: -10px;
+    top: 6px;
+}

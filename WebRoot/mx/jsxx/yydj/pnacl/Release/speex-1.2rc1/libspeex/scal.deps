@@ -1,0 +1,17 @@
+# Updated by fix_deps.py
+pnacl/Release/speex-1.2rc1/libspeex/scal.o: speex-1.2rc1/libspeex/scal.c \
+  speex-1.2rc1/libspeex/speex/speex_echo.h \
+  speex-1.2rc1/libspeex/speex/speex_types.h \
+  speex-1.2rc1/libspeex/speex/speex_config_types.h \
+  speex-1.2rc1/libspeex/vorbis_psy.h speex-1.2rc1/libspeex/arch.h \
+  speex-1.2rc1/libspeex/fixed_generic.h \
+  speex-1.2rc1/libspeex/os_support.h speex-1.2rc1/libspeex/smallft.h
+speex-1.2rc1/libspeex/scal.c:
+speex-1.2rc1/libspeex/speex/speex_echo.h:
+speex-1.2rc1/libspeex/speex/speex_types.h:
+speex-1.2rc1/libspeex/speex/speex_config_types.h:
+speex-1.2rc1/libspeex/vorbis_psy.h:
+speex-1.2rc1/libspeex/arch.h:
+speex-1.2rc1/libspeex/fixed_generic.h:
+speex-1.2rc1/libspeex/os_support.h:
+speex-1.2rc1/libspeex/smallft.h:

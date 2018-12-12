@@ -1,0 +1,21 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/iLBC_encode.o: libilbc/iLBC_encode.cpp \
+  libilbc/iLBC_define.h libilbc/LPCencode.h libilbc/FrameClassify.h \
+  libilbc/StateSearchW.h libilbc/StateConstructW.h libilbc/helpfun.h \
+  libilbc/constants.h libilbc/packing.h libilbc/iCBSearch.h \
+  libilbc/iCBConstruct.h libilbc/hpInput.h libilbc/anaFilter.h \
+  libilbc/syntFilter.h
+libilbc/iLBC_encode.cpp:
+libilbc/iLBC_define.h:
+libilbc/LPCencode.h:
+libilbc/FrameClassify.h:
+libilbc/StateSearchW.h:
+libilbc/StateConstructW.h:
+libilbc/helpfun.h:
+libilbc/constants.h:
+libilbc/packing.h:
+libilbc/iCBSearch.h:
+libilbc/iCBConstruct.h:
+libilbc/hpInput.h:
+libilbc/anaFilter.h:
+libilbc/syntFilter.h:

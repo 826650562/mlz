@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+html{height:100%;}
+body{ background:url(../images/loginbg.jpg) no-repeat center; height:100%; position:relative;}
+.loginbox{width:400px; height:500px; position:absolute; left:50%;margin-left:-200px; top:50%;margin-top:-250px;}
+.loginName{width:400px; height:65px; text-align:center; margin-bottom:20px;}
+.dengLuBox{width:380px; height:280px; padding:10px; background:url(../images/loginWhiteBg.png) repeat; border-radius:5px; box-shadow: 0 0 15px #555;
+-webkit-box-shadow: 0 0 15px #555;
+-moz-box-shadow: 0 0 15px #555;}
+.dengLuBoxInner{width:380px; height:280px; float:left; background:#fff;border-radius:5px;}
+.dengluTitle{width:100%; height:45px; line-height:45px; font-size:20px; font-weight:bold; text-align:center; background:#1b65e2; color:#fff; letter-spacing:2px;}
+.dengluCont{width:280px; float:left; padding:40px 50px 0px 50px;}
+.inputBox{width:280px; float:left; border:1px solid #e6e6e6;border-radius:2px;margin-bottom:15px;}
+.inputBoxLeft{width:38px; height:38px; float:left; box-sizing:border-box; text-align:center; line-height:34px;}
+.inputBoxRight{width:240px; float:left;}
+.layui-input, .layui-select, .layui-textarea {
+    height: 38px;
+    line-height: 38px;
+    line-height: 36px\9;
+    border: none;
+    background-color: #fff;
+    border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+
+
+
+.layui-input, .layui-textarea {
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+}
+.loginbtn{width:100%; float:left;}
+.loginbtn button{width:100%;}
+.loginBottom{width:100%; float:left; padding-top:30px; color:#fff; text-align:center; letter-spacing:1px;padding-left:95px}
+.loginBottom a{color:#fff;}
+

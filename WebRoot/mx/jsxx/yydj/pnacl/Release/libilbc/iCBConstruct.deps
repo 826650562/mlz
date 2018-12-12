@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/iCBConstruct.o: libilbc/iCBConstruct.cpp \
+  libilbc/iLBC_define.h libilbc/gainquant.h libilbc/getCBvec.h
+libilbc/iCBConstruct.cpp:
+libilbc/iLBC_define.h:
+libilbc/gainquant.h:
+libilbc/getCBvec.h:

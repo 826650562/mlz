@@ -1,0 +1,10 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/iCBSearch.o: libilbc/iCBSearch.cpp \
+  libilbc/iLBC_define.h libilbc/gainquant.h libilbc/createCB.h \
+  libilbc/filter.h libilbc/constants.h
+libilbc/iCBSearch.cpp:
+libilbc/iLBC_define.h:
+libilbc/gainquant.h:
+libilbc/createCB.h:
+libilbc/filter.h:
+libilbc/constants.h:

@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/drm_dec.o: libfaad/drm_dec.c libfaad/common.h \
+  libfaad/neaacdec.h
+libfaad/drm_dec.c:
+libfaad/common.h:
+libfaad/neaacdec.h:

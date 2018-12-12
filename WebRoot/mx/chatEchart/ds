@@ -1,0 +1,98 @@
+
+MXZH.chatLayer = function() {};
+MXZH.chatLayer.prototype = {
+	setOptions : function() {
+		return options = {
+			tooltip : {
+				trigger : 'item',
+				formatter : function(vl) {
+					var content = vl.name.substring(vl.name
+							.indexOf("-") + 1);
+					return content;
+				}
+			},
+			series : []
+		};
+	},
+	getSeries : function() {
+		return {
+			name : '连线',
+			type : 'map',
+			mapType : 'none',
+			data : [],
+            markPoint : {
+                symbol:'emptyCircle',
+                symbolSize : function (v){
+                    return 10 + v/10
+                },
+                effect : {
+                    show: true,
+                    shadowBlur : 0
+                },
+                itemStyle:{
+                    normal:{
+                        label:{show:false}
+                    },
+                    emphasis: {
+                        label:{position:'top'}
+                    }
+                },
+                data : [
+                  
+                ]
+            }
+		}
+	},
+}
+
+
+/*
+ * 控制器
+ */
+MXZH.chatLayerCF = function() {};
+MXZH.chatLayerCF.prototype = {
+	init : function() {
+		//构造函数
+		this.addEventLinster();
+		this.echartlayer=new MXZH.chatLayer();
+	},
+	addEventLinster : function() {
+		$(".sdchart").unbind().click(this, function(evet) {
+			evet.data.setPoint();
+		});
+		$(".thchart").unbind().click(this, function(evet) {
+			//连线
+			var series= evet.data.echartlayer.getSeries();
+			series.markPoint.data.push(point1,point2);
+			 dojo.require("esri.layers.EchartLayer")
+			//var layer=new EchartsLayer();
+			 MXZH.log(esri.layers.EchartLayer);
+			dojo.Mymap=MXZH.mainMap.wangMap.map;
+			
+			var opts=evet.data.echartlayer.setOptions();
+			opts.series.push(series);
+			var el=new esri.layers.EchartLayer(opts);
+			dojo.Mymap.addLayer(el);
+		});
+	},
+	setPoint : function() {
+		var p = [ [ 121.4, 31.5 ], [ 121.4, 31.2 ] ];
+		var gra = new esri.layers.GraphicsLayer();
+	    point1 = new esri.geometry.Point(p[0][0], p[0][1], new esri.SpatialReference({
+			wkid : WangConfig.constants.wkt
+		}));
+		point2 = new esri.geometry.Point(p[1][0], p[1][1], new esri.SpatialReference({
+			wkid : WangConfig.constants.wkt
+		}));
+		MXZH.mainMap.addLayer(gra);
+		gra.add(new esri.Graphic(point1, this.getYjPointSys()));
+		gra.add(new esri.Graphic(point2, this.getYjPointSys()));
+
+	},
+	getYjPointSys : function() {
+		return new esri.symbol.SimpleMarkerSymbol(esri.symbol.SimpleMarkerSymbol.STYLE_CIRCLE, 20,
+			new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_SOLID,
+				new esri.Color([ 255, 0, 0 ]), 1),
+			new esri.Color([ 143, 188, 143, 1 ]));
+	},
+}

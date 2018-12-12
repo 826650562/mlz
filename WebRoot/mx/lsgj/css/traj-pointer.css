@@ -1,0 +1,187 @@
+/*鎸囬拡*/
+.slider-thumb {
+	display: block;
+	width: 15px;
+	height: 2px;
+	border: 1px solid grey;
+	border-radius: 1em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	background: linear-gradient(#FAFAFA, #F6F6F6) repeat scroll 0 0 #FFFFFF;
+	position: absolute;
+}
+
+#vals {
+	width: 89px;
+	height: 29px;
+	background: #fef3ef;
+	border: 1px solid #d85222;
+	margin-left: 27px;
+	margin-top: -13px;
+	box-sizing: border-box;
+	cursor: pointer;
+	user-select: none;
+}
+
+#vals>img {
+	margin-left: 3px;
+	vertical-align: middle;
+}
+
+.offline:before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+	border-right: 9px solid #d85222;
+	position: absolute;
+	margin-left: -9px;
+	margin-top: 5px;
+}
+
+.walk:before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+	border-right: 9px solid #3acc35;
+	position: absolute;
+	margin-left: -9px;
+	margin-top: 5px
+}
+
+.stop:before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+	border-right: 9px solid #ed9c02;
+	position: absolute;
+	margin-left: -9px;
+	margin-top: 5px
+}
+
+.vals_img {
+	padding: 2px 0px 0px 2px;
+	width: 24px;
+	height: 24px;
+	float: left;
+}
+
+.vals_span {
+	font-family: Microsoft YaHei;
+	width: 56px;
+	text-align: center;
+	height: 27px;
+	line-height: 27px;
+	float: left;
+	font-size: 12px;
+}
+
+.play_container {
+    width: 350px;
+    height: 60px;
+    background: #01465e;
+}
+
+.playbtn_container {
+	width: 324px;
+	height: 30px;
+	margin: 15px auto;
+}
+
+.playbtns {
+	width: 59px;
+	height: 26px;
+	    border: 1px solid #005675;
+	border-radius: 2px;
+	float: left;
+}
+
+.play_box {
+	width: 29px;
+	height: 28px;
+	background: url('../images/playbtn.png');
+	float: left;
+}
+
+.play_box:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.div {
+	width: 1px;
+	height: 27px;
+	background: #005675;;
+	float: left;
+}
+
+.reset_box {
+	width: 29px;
+	height: 28px;
+	background: url('../images/resetbtn.png');
+	float: left;
+}
+
+.reset_box:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.range_box {
+	width: 263px;
+	height: 28px;
+	float: left;
+}
+
+.range {
+	margin-left: 16px;
+	cursor: pointer;
+}
+
+.range_text {
+	width: 5px;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+	position: relative;
+	top: -3px;
+}
+
+.range input[type=range] {
+	width: 195px;
+	-webkit-appearance: none;
+	border-radius: 2px;
+	background: #C5C5C5;
+	position: relative;
+	bottom: 5px;
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #0774ea),color-stop(50%, #C5C5C5));
+}
+
+.range input[type=range]:focus {
+	outline: none;
+}
+
+.range input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+.range input[type=range]::-webkit-slider-runnable-track {
+	height: 3px;
+	border-radius: 10px;
+	position: relative;
+	bottom: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 10px;
+	width: 10px;
+	background: #258af8;
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 1px #fff; /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}

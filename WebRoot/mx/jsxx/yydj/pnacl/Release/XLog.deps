@@ -1,0 +1,4 @@
+# Updated by fix_deps.py
+pnacl/Release/XLog.o: XLog.cpp XLog.h
+XLog.cpp:
+XLog.h:

@@ -1,0 +1,26 @@
+# Updated by fix_deps.py
+pnacl/Release/XAutoLock.o: XAutoLock.cpp XAutoLock.h XCritSec.h sysbase.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\memory.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\poll.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\sys/poll.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\sys/time.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\sys/socket.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\netinet/in.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\netinet6/in6.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\netdb.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\arpa/inet.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\netinet/tcp.h
+XAutoLock.cpp:
+XAutoLock.h:
+XCritSec.h:
+sysbase.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:
+C:/nacl_sdk/pepper_49/include/pnacl\poll.h:
+C:/nacl_sdk/pepper_49/include/pnacl\sys/poll.h:
+C:/nacl_sdk/pepper_49/include/pnacl\sys/time.h:
+C:/nacl_sdk/pepper_49/include/pnacl\sys/socket.h:
+C:/nacl_sdk/pepper_49/include/pnacl\netinet/in.h:
+C:/nacl_sdk/pepper_49/include/pnacl\netinet6/in6.h:
+C:/nacl_sdk/pepper_49/include/pnacl\netdb.h:
+C:/nacl_sdk/pepper_49/include/pnacl\arpa/inet.h:
+C:/nacl_sdk/pepper_49/include/pnacl\netinet/tcp.h:

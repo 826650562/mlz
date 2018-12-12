@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/error.o: libfaad/error.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/error.h
+libfaad/error.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/error.h:

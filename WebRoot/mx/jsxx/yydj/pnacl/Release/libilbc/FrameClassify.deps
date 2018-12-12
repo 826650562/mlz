@@ -1,0 +1,5 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/FrameClassify.o: libilbc/FrameClassify.cpp \
+  libilbc/iLBC_define.h
+libilbc/FrameClassify.cpp:
+libilbc/iLBC_define.h:

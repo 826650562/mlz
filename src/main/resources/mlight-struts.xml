@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="message-action" namespace="/" extends="base-default">
+		<!-- 定义拦截器 -->
+		<!-- <interceptors>
+			登录拦截器
+			<interceptor name="loginInterceptor"
+				class="cn.mlight.utils.interceptor.LoginInterceptor"></interceptor>
+			定义拦截器栈
+			<interceptor-stack name="systemStack">
+				<interceptor-ref name="loginInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="systemStack" /> -->
+
+		<!-- 全局结果集 -->
+		<global-results>
+			<result name="noLogin">/mx/login.jsp</result>
+		</global-results>
+
+		<!-- 主页跳转 -->
+		<action name="home_*" class="cn.mlight.action.HomeAction"
+			method="{1}">
+			<result name="home">/mx/home.jsp</result>
+		</action>
+		<!-- 主页跳转 -->
+		<action name="fhome_*" class="cn.mlight.action.HomeAction"
+			method="{1}">
+			<result name="fhome">/mx/fhome.jsp</result>
+		</action>
+
+		<!-- 登录 -->
+		<action name="login_*" class="cn.mlight.action.LoginAction"
+			method="{1}">
+			<result name="loginUI">/mx/login.jsp</result>
+			<result name="nologo" type="redirectAction">login_loginUI</result>
+			<result name="home" type="redirectAction">home_home</result>
+			<result name="logout" type="redirectAction">login_loginUI</result>
+		</action>
+		<!-- 地图跳转的Action -->
+		<action name="map_*" class="cn.mlight.action.MapAction" method="{1}">
+			<result name="mainUI">/pages/zhpt/main.jsp</result>
+			<result name="dqwz">/pages/zhpt/dqwz.jsp</result>
+			<result name="lsgj">/pages/zhpt/lsgj.jsp</result>
+		</action>
+
+		<!-- 聊天的Action -->
+		<action name="chat_*" class="cn.mlight.action.ChatAction"
+			method="{1}">
+
+		</action>
+		<!-- 任务相关 -->
+		<action name="*Task" class="cn.mlight.action.TaskAction"
+			method="{1}">
+		</action>
+
+		<!-- 语音录像相关 -->
+		<action name="video_*" class="cn.mlight.action.VideoAction"
+			method="{1}">
+		</action>
+		<!-- 跟控任务相关 -->
+		<action name="gkrw_*" class="cn.mlight.action.GkrwAction"
+			method="{1}">
+		</action>
+		<!-- 统计分析相关 -->
+		<action name="tjfx_*" class="cn.mlight.action.TjfxAction"
+			method="{1}">
+		</action>
+	</package>
+
+</struts>

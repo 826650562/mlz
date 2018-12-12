@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.mlight.domain">
+ <class name="GroupMember" table="t_group_member">
+	<id name="id">
+	   <column name="id"/>
+	   <generator class="native"/>
+	</id>
+    <property name="group_id">
+        <column name="group_id"/>
+    </property>
+     <property name="name">
+        <column name="name"/>
+    </property>
+     <property name="inviter">
+        <column name="inviter"/>
+    </property>
+     <property name="username">
+        <column name="username"/>
+    </property>
+     <property name="enter_time">
+        <column name= "enter_time"/>
+    </property>
+     <property name="create_time">
+        <column name="create_time"/>
+    </property>
+     <property name="update_time">
+        <column name="update_time"/>
+    </property>
+     <property name="delete_time">
+        <column name="delete_time"/>
+    </property>
+     <property name="deleted">
+        <column name="deleted"/>
+    </property>
+
+ </class>
+</hibernate-mapping>
+	

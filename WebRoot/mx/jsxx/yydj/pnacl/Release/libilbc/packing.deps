@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/packing.o: libilbc/packing.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h libilbc/helpfun.h
+libilbc/packing.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:
+libilbc/helpfun.h:

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.layui-tab-content{padding:0px;}
+
+.layui-tab-title{    text-align: center; width:280px; height:73px;border:none; background:#fff; padding: 10px 35px 5px 35px; border-bottom:1px solid #e2e2e2; position:relative;}
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{border:none;}
+.layui-tab-title li{ text-align:center; width:140px; padding:0px; position:relative;}
+.layui-tab{margin:0px;}
+.layui-tab-title .layui-this:after {border: none;}
+.layui-tab-title .layui-this {
+    color: #417bdc;
+}
+.layui-form-onswitch {
+    border-color: #417bdc;
+    background-color: #417bdc;
+}
+.layui-textarea{    min-height: 80px;
+    height: auto;
+    padding: 6px 10px;
+    resize: vertical; resize:none;}
+	.layui-form-item{margin-bottom:10px;}
+	.layui-form-checkbox{height:25px; line-height:23px;padding-right:25px;}
+	.layui-form-checkbox i{font-size:16px; width:25px; line-height:23px;}
+	.layui-form-checkbox span{font-size:13px;}
+	
+.jkdx_title {
+    width: 320px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #fff; border-bottom:1px solid #e2e2e2;
+}
+.jkdx_cont{width:330px; position:absolute;bottom:0px;top:43px;   overflow-y: auto;
+    overflow-x: hidden; padding:0px 10px; background:#f8fbff;}
+.jkdx_num{width:330px;padding:20px 0px; float:left; text-align:center;}
+.jkdx_num strong{font-size:25px; color:#3f7bdf;}
+.jkdx_tjtbox{width:328px; border:1px solid #eee; float:left; border-radius:2px; background:#fff; height:250px; margin-bottom:20px;}
+.tj_title{width:100%; float:left; height:40px; line-height:40px; font-weight:bold; font-size:15px; text-align:center;}
+.tuli{width:180px; height:120px; position:absolute;bottom:10px; z-index:99; background:#fff; left:10px; border-radius:2px; border:1px solid #eee;}
+.tuli img{width:180px; height:120px; border-radius:2px;}
+

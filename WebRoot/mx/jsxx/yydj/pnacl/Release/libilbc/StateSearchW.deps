@@ -1,0 +1,9 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/StateSearchW.o: libilbc/StateSearchW.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h libilbc/filter.h \
+  libilbc/helpfun.h
+libilbc/StateSearchW.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:
+libilbc/filter.h:
+libilbc/helpfun.h:

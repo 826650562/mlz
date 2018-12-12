@@ -1,0 +1,17 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/sbr_hfadj.o: libfaad/sbr_hfadj.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/structs.h libfaad/cfft.h libfaad/sbr_dec.h \
+  libfaad/ps_dec.h libfaad/bits.h libfaad/analysis.h \
+  libfaad/sbr_syntax.h libfaad/sbr_hfadj.h libfaad/sbr_noise.h
+libfaad/sbr_hfadj.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/structs.h:
+libfaad/cfft.h:
+libfaad/sbr_dec.h:
+libfaad/ps_dec.h:
+libfaad/bits.h:
+libfaad/analysis.h:
+libfaad/sbr_syntax.h:
+libfaad/sbr_hfadj.h:
+libfaad/sbr_noise.h:

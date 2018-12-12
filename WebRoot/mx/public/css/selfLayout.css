@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body{ font-family:Microsoft YaHei;}
+
+.logo{width:90px; height:70px; float:left; background:#2655a5; text-align:center; line-height:50px; position:relative;}
+.logoname{height:70px; float:left;}
+.logoline{width:10px; height:70px;  background:url(../images/logoline.png) no-repeat; position:absolute; top:0px; right:-9px;}
+
+.layout_top{width:100%; height:50px; background:#002130; float:left; position:relative;}
+.topbarcenter{width:414px;height:32px; background:url(../images/topcenterbg.png) no-repeat; z-index:99; position:absolute;bottom:-32px;left:50%; margin-left:-207px;}
+.top_right{ float:right; height:50px;position: relative;}
+.top_right ul{ float:left;}
+.topbartext{width:500px; height:50px; line-height:50px; font-weight:bold; font-size:24px;color:#1fd8ca; position:absolute;margin-left:-250px;left:50%; bottom:-20px;
+text-align:center;z-index:100; letter-spacing:2px}
+.top_right ul li{
+	height: 70px;
+    float: left;
+    color: #fff;
+    line-height: 70px;
+    padding: 0px 20px;}
+.top_right ul a{height:70px; float:left;padding:0px 15px 0px 15px;color:#fff; line-height:70px; font-size:13px;}
+/*覆盖layui css相关样式 start*/
+.layui-nav{ background:none;}
+.layui-nav-child{top:70px;}
+.layui-nav .layui-nav-more{top:30px; right:10px;}
+.layui-nav .layui-nav-item a{color:#fff;}
+.layui-nav .layui-nav-item .layui-nav-child a{color:#333; height:40px; line-height:40px;}
+.layui-nav-child{padding:0px;}
+.layui-nav .layui-nav-item a{padding:0 10px;}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{ background:#111;}
+.layui-btn {background-color: #006f97;  opacity: 1;}
+.layui-btn-small{line-height:32px;}
+.layui-btn-primary:hover{border-color:#3463b1;color:#333}
+.layui-btn-normal{background-color:#3463b1; color:#fff;}
+.layui-btn .layui-icon{font-size:14px;}
+
+.layui-tab-brief>.layui-tab-title .layui-this{color:#70ab32;}
+.layui-btn-normal{background:#006f97;    opacity: 1;}
+.layui-btn-normal:hover{opacity: 0.9;}
+.layui-laypage .layui-laypage-curr .layui-laypage-em { background-color: #006f97;}
+.layui-form-switch em {font-size:13px;}
+.layui-form-checked[lay-skin=primary] i {border-color:  #006f97; background-color:  #006f97;color: #fff;}
+.layui-form-checkbox[lay-skin=primary]:hover i { border-color: #006f97;color: #fff;}
+/*覆盖layui css相关样式 end*/
+
+.layout_left{ background:#002130; position:fixed;top:50px;left:0px; bottom:0px;overflow-y:auto; overflow-x:hidden; width:90px;}
+.layout_right{ position:absolute;top:50px;right:0px; bottom:0px;left:90px; background:#fff; overflow:hidden; }
+.layout_left ul{width:90px; float:left;}
+.layout_left ul li{width:100%;  float:left;}
+.layout_left ul li a{width:100%; float:left;height:90px; font-size:13px; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; position:relative;}
+.layout_left ul li a:hover{border-left:3px solid #eceb52; background:#01465e; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; transition:background-color 0.3s ease-in;}
+.layout_left .navXtb{width:100%; height:30px; padding:17px 0px 3px 0px; float:left; text-align:center;}
+.layout_left .navTxt{width:100%; float:left; color:#fff; text-align:center;}
+.navActive{background:#01465e; border-left:3px solid #eceb52;}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #006f97;
+    color: #fff;
+}
+.mainLeft{position:absolute;top:0px; left:0px; bottom:0px; background:#fff;}
+.mainLeftOnOff{    display: none;width:20px; height:60px; background:#01465e; border-right:1px solid #01465e; border-top:1px solid #01465e; border-bottom:1px solid #01465e; position:absolute;margin-top:-30px; top:50%;left:0px; z-index:1000; border-top-right-radius:3px;border-bottom-right-radius:3px; cursor:pointer; text-align:center; line-height:60px;}
+.mainLeftOnOff:hover{background:#003548;}
+.leftPanel1{width: 100%;position:absolute;top:0px;left:0px;bottom:0px; background:#fff; border-right:1px solid #ddd;}
+.leftPanel2{width:350px;position:absolute;left:351px;top:0px; bottom:0px; background:#01465e;border-left:1px solid #002130;border-right:1px solid #ddd;}
+.showLeftPanel2{float:left;padding:10px; cursor:pointer;}
+
+.mainRight{position:absolute;top:0px; right:0px; left:1px; bottom:0px;overflow-y:auto; overflow-x:hidden; background:#011017;}
+.maptoolbarTopRight{position:absolute; top:20px; right:20px;z-index:1;}
+.villageCompanyTopRight{position: absolute;top: 60px;right: 20px;z-index: 1;}
+.villageCompany{width: 100%;border-left: 1px solid #e6d7d7;border-top: 1px solid #e6d7d7;float: left;box-sizing: border-box;}
+.villageCompanySpan{width: 24.99%;height: 30px;box-sizing: border-box;line-height: 30px;text-align: center;color: #1b1b1b;float: left;border-right: 1px solid #e6d7d7;font-size: 13px;border-bottom: 1px solid #e6d7d7;cursor: pointer;}
+.companyRoadTopRight{position: absolute;top: 320px;right: 20px;z-index: 1;}
+.companyRoad{width: 100%;border-left: 1px solid #e6d7d7;border-top: 1px solid #e6d7d7;float: left;box-sizing: border-box;}
+.companyRoadSpan{width: 24.99%;height: 30px;box-sizing: border-box;line-height: 30px;text-align: center;color: #1b1b1b;float: left;border-right: 1px solid #e6d7d7;font-size: 13px;border-bottom: 1px solid #e6d7d7;cursor: pointer;}
+.riskManageTopRight{position: absolute;top: 612px;right: 275px;z-index: 1;}
+.riskManage{width: 100%;border-left: 1px solid #e6d7d7;border-top: 1px solid #e6d7d7;float: left;box-sizing: border-box;}
+.riskManageSpan{display:block;width: 98%;height: 30px;box-sizing: border-box;line-height: 30px;text-align: center;border-right: 1px solid #e6d7d7;font-size: 13px;border-bottom: 1px solid #e6d7d7;cursor: pointer;}
+.rotate{transform:rotate(360deg);-ms-transform:rotate(360deg); /* Internet Explorer 9*/-moz-transform:rotate(360deg); /* Firefox */-webkit-transform:rotate(360deg); /* Safari 和 Chrome */-o-transform:rotate(360deg); /* Opera */filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
+.spanbluebg{background: #41b8dcbf;}
+.maptoolbarBottomRight{position:absolute; bottom:60px; right:20px;z-index:1;}
+.mapToggle{ height:80px; background:#006f97; bottom:20px; right:20px; position:absolute;}
+.mapToggle ul{float:left;padding:10px;}
+.mapToggle ul li{float:left; padding-right:10px;}
+.mapToggle ul li:nth-child(2){ padding-right:0px;} 
+.mapToggle ul li a{width:82px; height:56px; padding:2px; background:#fff; float:left; display:block;}
+.mapToggle ul li a:hover{ background:#1dca6b;}
+.slef-btn:hover{opacity:.8;filter:alpha(opacity=80);}
+
+.self-btn:active{opacity:1;filter:alpha(opacity=100)}
+.leftPanel1_Main,.leftPanel2_Main{
+	width:100%;position:absolute;top:0px;left:0px;bottom:0px; background:#01465e;
+	}
+
+
+
+.ellipsis{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.width60{width:60px;}
+.width80{width:80px;}
+.width100{width:100px;}
+.width120{width:120px;}
+.newMessage{padding:0px 5px; background:#e94834; font-size:12px; border-radius:20px; min-width:10px; height:20px; text-align:center; color:#fff; line-height:20px; position:absolute;top:5px;right:10px; z-index:100;max-width:20px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; box-shadow: -2px -2px #333;
+-webkit-box-shadow: -2px -2px #333;
+-moz-box-shadow: -2px -2px #333;display:none; }
+
+
+/*即时消息*/
+   .luyinbox{width:100%; height:35px; background:#f3f3f3; float:left; position:relative;}
+   .luyinGif{width:30px;  float:left; text-align:center; padding:7px 0px 0px 0px;}
+   .luyinon{float:left; height:35px; line-height:35px; color:#666; font-size:12px;}
+   .luyinbtnBox{ padding-top:5px; float:right;}
+   .luyinbtn{padding:0px 10px; height:25px; line-height:23px; color:#fff; font-size:12px; float:left; border-radius:2px;    background: #006f97; border:1px solid #205ec5; margin:0px 3px; cursor:pointer;}
+   .luyinbtn:hover{ background: #508df3; border:1px solid #3777e2;}
+   .luyinbtn:active{background: #1361e3; border:1px solid #084fc6;}
+   .quxiaobtn{padding:0px 10px; height:25px; line-height:23px; color:#111; font-size:12px; float:left; border-radius:2px;    background: #fff; border:1px solid #eee; margin:0px 3px; cursor:pointer;}
+   .quxiaobtn:hover{ background: #eee; border:1px solid #ddd;}
+   .quxiaobtn:active{background: #fff; border:1px solid #eee;}
+   
+   
+   
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.topCont{ height:70px;}
+.fubiaoti{padding:28px 0px 0px 0px; color:#cde0ff; font-size:15px; font-weight:bold; letter-spacing:1px;}
+.topCont ul{padding:10px 0px; margin:0px; float:left; }
+.topCont ul li{ height:25px; line-height:25px; padding:0px 15px;font-size:12px;}
+.topCont ul li span{height:25px; line-height:25px; float:left; display:block;color:#cde0ff; letter-spacing:1px; }
+.topCont ul li font{ font-size:12px; height:25px; line-height:25px; padding:0px 8px; color:#111; font-weight:bold;  background:#edbb5b; border-radius:2px; box-shadow: inset 0 0 2px #111;
+-webkit-box-shadow: inset 0 0 2px #111;
+-moz-box-shadow: inset 0 0 2px #111;}
+.borderNone{border:none !important;}
+.gztcButton{width: 328px;margin-top: 10px;}
+.aqzk_title{width:100%;padding:0px 10px;box-sizing:border-box;font-weight:bold;color:#fff; border-bottom:2px solid #055552; background:#003548;height:45px; line-height:45px;}
+.aqzk_name{float:Left;}
+.aqzk_you{border-radius:30px; height:18px; line-height:18px;padding:0px 10px; display:block; border:1px solid #01a330;color:#01a330;font-size:12px; float:right;}
+.aqzk_liang{border-radius:30px; height:18px; line-height:18px;padding:0px 10px; display:block; border:1px solid #0173d8;color:#0173d8;font-size:12px; float:right;}
+.aqzk_zhong{border-radius:30px; height:18px; line-height:18px;padding:0px 10px; display:block; border:1px solid #b89e16;color:#b89e16;font-size:12px; float:right;}
+.aqzk_cha{border-radius:30px; height:18px; line-height:18px;padding:0px 10px; display:block; border:1px solid #d33035;color:#d33035;font-size:12px; float:right;}
+
+
+

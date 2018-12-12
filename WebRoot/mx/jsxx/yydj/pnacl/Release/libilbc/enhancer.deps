@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/enhancer.o: libilbc/enhancer.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h libilbc/filter.h
+libilbc/enhancer.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:
+libilbc/filter.h:

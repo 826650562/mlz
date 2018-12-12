@@ -1,0 +1,103 @@
+ div.msg .ctn {
+	width: 130px;
+	float: left;
+	padding: 0px 12px 0px 0px;
+	margin-left: 50px;
+	border: 1px solid #ddd;
+	background: #f6f6f6;
+}
+
+div.msg .ctn .img-ctn {
+	padding: 10px 10px 10px 10px;
+	float: left;
+}
+
+div.msg .ctn .video-ctn {
+	margin: 10px 10px 10px 10px;
+	float: left;
+	position: relative;
+	width: 120px;
+}
+
+li.sender div.msg .ctn .video-ctn {
+	margin: 10px 10px 1px 10px;
+}
+
+li.sender div.msg .ctn .img-ctn {
+	padding: 10px 10px 1px 10px;
+}
+
+div.msg .ctn .video-ctn .overlayer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #333;
+	opacity: 0.4;
+	z-index: 100;
+}
+
+div.msg .ctn .video-ctn .overlayer:hover {
+	opacity: 0.5;
+}
+
+div.msg .ctn .video-ctn .play-ctn {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 25px;
+	left: 45px;
+	border-radius: 30px;
+	background: #000;
+	z-index: 110;
+}
+
+div.msg .ctn .video-ctn .play-ctn:hover {
+	cursor: pointer;
+}
+
+div.msg .ctn .video-ctn .play-ctn img {
+	border-radius: 30px;
+	width: 30px;
+	height: 30px;
+}
+
+div.msg .ctn .img-ctn img,div.msg .ctn .video-ctn img {
+	width: 120px;
+}
+
+div.msg .ctn .img-ctn img:hover {
+	cursor: pointer;
+}
+
+div.msg .bottom {
+	width: 130px;
+	height: 30px;
+	float: left;
+	padding: 0px 10px 0px 10px;
+}
+
+div.msg .bottom .progress-ctn {
+	width: 80px;
+	height: 7px;
+	float: left;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	background: #ccc;
+}
+
+div.msg .bottom .progress-ctn .bar {
+	height: 7px;
+	background: #ff8d35;
+	float: left;
+}
+
+div.msg .bottom .href-text {
+	height: 30px;
+	float: left;
+	color: #333;
+	padding-left: 10px;
+	text-decoration: none;
+	margin-top: 5px;
+ 

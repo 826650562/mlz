@@ -1,0 +1,9 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaac/midside.o: libfaac/midside.c libfaac/channels.h \
+  libfaac/coder.h libfaac/util.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\memory.h
+libfaac/midside.c:
+libfaac/channels.h:
+libfaac/coder.h:
+libfaac/util.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.mlight.domain">
+ <class name="User" table="t_user">
+	<id name="id">
+	   <column name="id"/>
+	   <generator class="native"/>
+	</id>
+	<property name="organization_id">
+	   <column name="organization_id"/>
+	</property>
+	<property name="department_id">
+	   <column name="department_id"/>
+	</property>
+	<property name="type">
+	   <column name="type"/>
+	</property>
+	<property name="username">
+	   <column name="username"/>
+	</property>
+	<property name="password">
+	   <column name="password"/>
+	</property>
+	<property name="name">
+	   <column name="name"/>
+	</property>
+	<property name="pinyin">
+	   <column name="pinyin"/>
+	</property>
+	<property name="mobile_phone">
+	   <column name="mobile_phone"/>
+	</property>
+	<property name="phone">
+	   <column name="phone"/>
+	</property>
+	<property name="email">
+	   <column name="email"/>
+	</property>
+	<property name="avatar">
+	   <column name="avatar"/>
+	</property>
+	<property name="original_avatar">
+	   <column name="original_avatar"/>
+	</property>
+	<property name="device_id">
+	   <column name="device_id"/>
+	</property>
+	<property name="device_uid">
+	   <column name="device_uid"/>
+	</property>
+	<property name="token">
+	   <column name="token"/>
+	</property>
+	<property name="last_login_time">
+	   <column name="last_login_time"/>
+	</property>
+	<property name="create_time">
+	   <column name="create_time"/>
+	</property>
+	<property name="update_time">
+	   <column name="update_time"/>
+	</property>
+	<property name="delete_time">
+	   <column name="delete_time"/>
+	</property>
+	<property name="deleted">
+	   <column name="deleted"/>
+	</property>
+	<property name="cancelled">
+	   <column name="cancelled"/>
+	</property>
+	<property name="sequence">
+	   <column name="sequence"/>
+	</property>
+    
+    <!-- users属性，与我表示1对多的关系 -->
+    <!-- messages属性，与我表示1对多的关系 -->
+  
+ </class>
+</hibernate-mapping>
+	

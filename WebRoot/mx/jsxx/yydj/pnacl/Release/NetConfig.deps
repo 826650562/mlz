@@ -1,0 +1,4 @@
+# Updated by fix_deps.py
+pnacl/Release/NetConfig.o: NetConfig.cpp NetConfig.h
+NetConfig.cpp:
+NetConfig.h:

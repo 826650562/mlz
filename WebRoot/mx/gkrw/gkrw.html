@@ -1,0 +1,500 @@
+
+        
+        
+        
+  <div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">
+      <div class="tabTitleJiantou"></div>
+      <div class="gkrw_tabTitle_xtb"><img src="gkrw/images/rwcx_blue.png" width="39" height="39"></div>
+      <div class="gkrw_tabTitle_txt">任务查询</div>
+    </li>
+    <li>
+      <div class="tabTitleJiantou"></div>
+      <div class="gkrw_tabTitle_xtb"><img src="gkrw/images/rwxz_gray.png" width="39" height="39"></div>
+      <div class="gkrw_tabTitle_txt">任务新增</div>
+    </li>
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show">
+    <form class="layui-form" action="">
+      <div class="gkrw_cxbox">
+        <div class="gkrw_cxcont">
+            <div class="gkrw_cxboxTimeStart"><input type="text" placeholder="开始时间" class="layui-input"><img src="gkrw/images/rilixtb.png" width="20" height="20"></div>
+            <div class="gkrw_cxboxTimeLine"><img src="gkrw/images/timejiantou.png" width="40" height="40"></div>
+            <div class="gkrw_cxboxTimeEnd"> <input type="text" placeholder="结束时间" class="layui-input"><img src="gkrw/images/rilixtb.png" width="20" height="20"></div>
+        </div>
+        <div class="gkrw_cxcont" style=" background:#f6f6f6;">
+           <div class="layui-form-item"  style="margin-bottom:0px;">
+            <label class="layui-form-label">任务状态：</label>
+            <div class="layui-input-block">
+              <input type="radio" name="renwu" value="在侦任务" title="在侦任务" checked="">
+              <input type="radio" name="renwu" value="已结任务" title="已结任务">
+            </div>
+          </div>
+          <div class="layui-form-item" style="margin-bottom:0px;">
+            <label class="layui-form-label">任务等级：</label>
+            <div class="layui-input-block">
+              <input type="radio" name="zhuangtai" value="高" title="高" checked="">
+              <input type="radio" name="zhuangtai" value="中" title="中">
+              <input type="radio" name="zhuangtai" value="低" title="低">
+            </div>
+          </div>
+        </div>
+        <div class="gkrw_cxcont">
+           
+             <div class="search">
+               <div class="search_input"><input type="text" name="number" placeholder="任务名称，目标对象" class="layui-input" style="border-top-right-radius:0px;border-bottom-right-radius:0px;"></div>
+               <div class="search_btn"><button class="layui-btn layui-btn-normal" style="border-top-left-radius:0px;border-bottom-left-radius:0px;">搜索</button></div>
+             </div>
+           
+        </div>
+      </div>
+      </form>
+      <div class="gkrw_box1">
+         <ul>
+          
+         </ul>
+      </div>
+       <div class="lsgj_pagesbox">
+                <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-1">
+                <span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span>
+                <a href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a>
+                <a href="javascript:;" data-page="4">4</a><span>…</span><a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a>
+                </div>
+          </div>
+    
+    </div>
+    <div class="layui-tab-item">
+
+    <form class="layui-form" action="">
+    
+    
+    
+       <div class="gkrw_box2"> 
+       
+       
+        <div class="gkrw_czbox">
+       
+         <ul>     
+           <li>
+              <div class="gkrw_newTitle">任务名称：</div>
+              <div class="gkrw_inputBox"><input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="任务名称" class="layui-input"></div>
+           </li>
+           <li style="margin-bottom:0px;">
+             <div class="layui-form-item" style="margin-bottom:0px;">
+                <label class="layui-form-label">任务等级：</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="zhuangtai" value="高" title="高" checked="">
+                  <input type="radio" name="zhuangtai" value="中" title="中">
+                  <input type="radio" name="zhuangtai" value="低" title="低">
+                </div>
+               </div>
+           </li>
+           
+
+           
+           <li>
+              <div class="gkrw_newTitle">任务内容：</div>
+              <div class="gkrw_inputBox">
+              
+              <textarea placeholder="任务内容" class="layui-textarea"></textarea>
+              
+              </div>
+           </li>
+           <li>
+              <div class="gkrw_newTitle">任务负责人：</div>
+              <div class="gkrw_inputBox"><input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="任务负责人" class="layui-input"></div>
+           </li>
+            <li>
+              <div class="mbdx">目标对象：</div>
+              <div class="mbdxadd"></div>
+              <div class="mbdxtishi"><em>（添加目标对象）</em></div>
+           </li>
+         </ul>
+         
+         </div>
+         
+
+         <div class="mudx_box">
+         
+         </div>
+      </div>
+    </form>   
+    </div>
+  </div>
+</div>
+    
+         
+         
+    </div>
+  
+      
+      
+    </div>
+    
+    <div class="leftPanel3">
+      <h3 class="gkrw__title ellipsis">秦皇岛燕山大街跟控</h3>
+      <div class="leftPanel3_Main">
+         <div class="gkrw_lctishi">以下为关键节点动态</div>
+         <div class="gkrw_lcbox">
+           <ul>
+              <li>
+                <div class="gkrw_lcbg">
+                    <div class="gkrw_lcbginnner">
+                      <div class="gkrw_label">
+                          <div class="gkrw_lcxtb"><img src="gkrw/images/gkrw_lcxtb.png" width="23" height="23"></div>   
+                          <div class="gkrw_lctxt" style="padding:0px;"><strong>指挥员1asdfasdfadfasdfasdf</strong><span class="colorGray">创建于：2017/04/22 09:55</span></div>
+                      </div>
+                    </div>
+                 </div> 
+              </li>
+              <li> 
+                 <div class="gkrw_lcbg">
+                    <div class="gkrw_lcbginnner">
+                      <div class="gkrw_label">
+                          <div class="gkrw_lcxtb"><img src="gkrw/images/gkrw_lcxtb.png" width="23" height="23"></div>   
+                          <div class="gkrw_lcbq"><img src="gkrw/images/zrw.png" width="65" height="19"></div>
+                          <div class="gkrw_lcbq"><img src="gkrw/images/yj.png" width="47" height="19"></div>
+                      </div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt"><strong>跟控一组</strong></div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">组长：李长海</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">开始时间：2017-12-12：02：23</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">结束时间：2017-12-14：23：12</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">目标对象：
+                          <span class="gkdx_name">尼格买买提</span>、
+                          <span class="gkdx_name">阿布藏鲁斯</span>、
+                          <span class="gkdx_name">富尔罗林斯 </span>
+                      </div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">备注：任务已顺利移交给跟控二组。</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">组长：李长海</div></div>
+                      <div class="gkrw_lcli">
+                         <div class="gkrw_lctxt" style="padding:10px 0px 0px 20px;">
+                           <button class="gkdx_lcbtn">查看轨迹</button>
+                           <button class="gkdx_lcbtn">查看消息</button>
+                         </div>
+                      </div>
+                    </div>
+                 </div>
+              </li>
+               <li> 
+                 <div class="gkrw_lcbg">
+                    <div class="gkrw_lcbginnner">
+                      <div class="gkrw_label">
+                          <div class="gkrw_lcxtb"><img src="gkrw/images/gkrw_lcxtb.png" width="23" height="23"></div>   
+                          <div class="gkrw_lcbq"><img src="gkrw/images/zrw.png" width="65" height="19"></div>
+                          <div class="gkrw_lcbq"><img src="gkrw/images/zz.png" width="47" height="19"></div>
+                      </div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt"><strong>跟控一组</strong></div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">组长：李长海</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">开始时间：2017-12-12：02：23</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">结束时间：无</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">目标对象：
+                          <span class="gkdx_name">尼格买买提</span>、
+                          <span class="gkdx_name">阿布藏鲁斯</span>、
+                          <span class="gkdx_name">富尔罗林斯 </span>
+                      </div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">备注：任务已顺利移交给跟控二组。</div></div>
+                      <div class="gkrw_lcli"><div class="gkrw_lctxt">组长：李长海</div></div>
+                      <div class="gkrw_lcli">
+                         <div class="gkrw_lctxt" style="padding:10px 0px 0px 20px;">
+                           <button class="gkdx_lcbtn">查看轨迹</button>
+                           <button class="gkdx_lcbtn">查看消息</button>
+                         </div>
+                      </div>
+                    </div>
+                 </div>
+              </li>
+               
+           </ul>
+         </div>
+      </div>
+    </div>
+    
+    
+    <div class="leftPanel4">
+      <h3 class="gkrwxttitle ellipsis"><div class="gkrwxttitleInner">跟控一组</div></h3>
+      
+      
+      <div class="lsxx_detailCont">
+             <ul>
+            <!-----------右边文字模版 start------------>    
+               <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                        <div class="lsxxDetail_right_txtBox">
+                           <div class="lsxxDetail_right_txt">收到了</div>
+                           <div class="qipao_right_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+             <!-----------右边文字模版 end------------> 
+               
+            <!-----------左边文字模版 start------------>   
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_txtBox">
+                           <div class="lsxxDetail_left_txt">当你的技能达到一定水平的时候，那就是开始修炼内功的时候了。 当你的技能达到一定水平的时候，那就是开始修炼内功的时候了。</div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+           <!-----------左边文字模版 end------------>  
+           
+           <!-----------左边语音模版 start------------>    
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_yuyinBox"><img src="gkrw/images/leftYY.png" width="39" height="34"> </div>
+                     </div>
+                  </div>
+               </li>
+            <!-----------左边语音模版 end------------>       
+
+            <!-----------左边图片模版 start------------>  
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_txtBox">
+                           <div class="lsxxDetail_left_img"> <img src="gkrw/images/img1.jpg"> </div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+           <!-----------左边图片模版 end----------->  
+               
+         <!-----------右边图片模版 start------------>      
+                <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                        <div class="lsxxDetail_right_txtBox">
+                           <div class="lsxxDetail_right_img"><img src="gkrw/images/img2.jpg"> </div>
+                           <div class="qipao_right_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------右边图片模版 end------------>   
+        
+        
+        <!-----------右边语音模版 start------------>      
+                <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                         <div class="lsxxDetail_right_yuyinBox"><img src="gkrw/images/rightYY.png" width="39" height="34"> </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------右边语音模版 end------------> 
+        
+        <!-----------左边位置消息模版 start------------>  
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_txtBox">
+                           <div class="lsxxDetail_left_weizhi"> 
+                              <div class="lsxx_map"><img src="gkrw/images/mapimg.png" width="120" height="100"></div>
+                             <div class="lsxxDetail_left_weizhiTxt">林恺俊阿拉克立刻将阿里贷款</div>
+                           </div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------左边位置消息模版 end----------->
+        
+        <!-----------右边位置消息模版 start------------>  
+              <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                        <div class="lsxxDetail_right_txtBox">
+                            <div class="lsxxDetail_left_weizhi"> 
+                              <div class="lsxx_map"><img src="gkrw/images/mapimg.png" width="120" height="100"></div>
+                              <div class="lsxxDetail_left_weizhiTxt">林恺俊阿拉克立刻将阿里贷款</div>
+                            </div>
+                           <div class="qipao_right_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------右边位置消息模版 end----------->
+        
+        
+        <!-----------左边视频消息模版 start------------>  
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_shipinBox">
+                           <div class="shipin_mengceng"><div class="shipin_xtb"><img src="gkrw/images/bofang.png" width="35" height="35"></div></div>
+                           <div class="lsxxDetail_left_shipin">  </div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------左边视频消息模版 end----------->    
+               
+               
+        <!-----------右边视频消息模版 start------------>  
+              <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                        <div class="lsxxDetail_right_shipinBox">
+                           <div class="shipin_mengceng"><div class="shipin_xtb"><img src="gkrw/images/bofang.png" width="35" height="35"></div></div>
+                           <div class="lsxxDetail_right_shipin">  </div>    
+                           <div class="qipao_right_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------右边位置消息模版 end----------->
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               <!-----------右边文字模版 start------------>    
+               <li>
+                  <div class="lsxxDetail_right">
+                     <div class="lsxxDetail_right_nametime">
+                         <div class="personName">张队长</div>
+                         <div class="lsxx_time">2017/03/02 12:09:12</div>
+                     </div>
+                     <div class="lsxxDetail_right_cont">
+                        <div class="lsxxDetail_right_txtBox">
+                           <div class="lsxxDetail_right_txt">下午13:20准时在大会议室开会，大家都要参加，有事儿提前告知。</div>
+                           <div class="qipao_right_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+             <!-----------右边文字模版 end------------> 
+              <!-----------左边文字模版 start------------>   
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">刘宏飞</div>
+                         <div class="lsxx_time">2017/03/02 12:10:03</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_txtBox">
+                           <div class="lsxxDetail_left_txt">收到</div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+           <!-----------左边文字模版 end------------>   
+               
+               <!-----------左边视频消息模版 start------------>  
+               <li>
+                  <div class="lsxxDetail_left">
+                     <div class="lsxxDetail_left_nametime">
+                         <div class="personName">安建国</div>
+                         <div class="lsxx_time">2017/03/02 12:11:04</div>
+                     </div>
+                     <div class="lsxxDetail_left_cont">
+                        <div class="lsxxDetail_left_shipinBox">
+                           <div class="shipin_mengceng"><div class="shipin_xtb"><img src="gkrw/images/bofang.png" width="35" height="35"></div></div>
+                           <div class="lsxxDetail_left_shipin">  <img src="public/images/sp1.png" width="120" height="100"></div>
+                           <div class="qipao_left_jiantou"></div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+        <!-----------左边视频消息模版 end----------->    
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+             </ul>
+           </div>
+      
+    
+    </div>
+    
+    
+  </div>
+  <div class="gkrw_cont2"> <a href="#" class="mainLeftOnOff"><img src="public/images/jiantouleft.png" width="15" height="15"></a>
+    <div class="maptoolbarTopRight">
+      <button class="layui-btn layui-btn-primary layui-btn-small" style="  margin:0px; border-radius:0px;background:#417bdc;opacity:1;"><i class="layui-icon"><img src="public/images/cejuxtb.png" width="15" height="15"></i></button>
+      <button class="layui-btn layui-btn-primary layui-btn-small" style=" margin:0px; border-radius:0px;background:#417bdc;opacity:1;"><i class="layui-icon"><img src="public/images/dingweixtb.png" width="15" height="15"></i></button>
+    </div>
+    <div class="maptoolbarBottomRight">
+      <button class="layui-btn layui-btn-primary layui-btn-small" style=" display:block; margin:0px; border-radius:0px; background:#417bdc;opacity:1;"><i class="layui-icon"><img src="public/images/addxtb.png" width="15" height="15"></i></button>
+      <button class="layui-btn layui-btn-primary layui-btn-small" style=" display:block; margin:0px;  border-radius:0px; background:#417bdc; opacity:1;"><i class="layui-icon"><img src="public/images/jianxtb.png" width="15" height="15"></i></button>
+    </div>
+    
+    
+
+    
+  </div>
+</div>
+
+
+
+<script src="gkrw/js/gkrw.js" type="text/javascript"></script>
+
+</body>
+</html>

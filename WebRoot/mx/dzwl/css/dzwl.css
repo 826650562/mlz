@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+.layui-tab-title{ width:280px; height:73px;border:none; background:#fff; padding: 10px 35px 5px 35px; border-bottom:1px solid #e2e2e2; position:relative;}
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{border:none;}
+.layui-tab-title li{ text-align:center; width:140px; padding:0px; position:relative;}
+.layui-tab{margin:0px;}
+.layui-tab-title .layui-this:after {border: none;}
+.layui-tab-title .layui-this {
+    color: #417bdc;
+}
+.layui-form-onswitch {
+    border-color: #417bdc;
+    background-color: #417bdc;
+}
+
+.tabTitleJiantou{width:15px; height:6px; position:absolute;bottom:-9px; left:63px; /* background:url(../images/tab_jiantou.png) no-repeat; */}
+.dzwl_tabTitle_xtb{width:140px; float:left; height:42px;}
+.dzwl_tabTitle_txt{width:140px; float:left; height:28px; line-height:28px;}
+.dzwl_box1{width:330px;padding:10px; position:absolute; top:90px; bottom:0px; left:0px; right:0px; overflow-y: auto;overflow-x: hidden;}
+.dzwl_box2{width:350px;position:absolute; top:90px; bottom:0px; left:0px; right:0px;}
+.dzwl_box1 ul,.dzwl_box2 ul{width:330px; float:left;}
+.dzwl_box1 ul li,.dzwl_box2 ul li{width:298px;padding:15px; float:left; border:1px solid #e2e2e2;border-radius:2px; margin-bottom:10px;}
+.dzwl_box1 ul li:hover,.dzwl_box2 ul li:hover{background:#f0f3f8; transition:background-color 0.3s ease-in; border:1px solid #dce6f7;}
+
+.dzwl_all{width:330px;padding:10px; position:absolute; top:60px; bottom:0px; left:0px; right:0px; overflow-y: auto;overflow-x: hidden;}
+.xjwl{width: 330px; float: left; padding: 10px; border-bottom:1px solid #e2e2e2;}
+.xjwlButton { width: 100%;}	
+
+.noOutNoIn_xtb{width:47px; height:47px; float:left;}
+.noOutNoIn_txt{width:235px; float:left; padding-left:15px; line-height:22px;}
+.noOutNoIn_txt strong{padding:0px 7px;}
+.Iknow{width:100%; float:left;padding:5px 0px 0px 0px; cursor:pointer;}
+.Iknow span{width:25px; height:15px; line-height:15px; text-align:center; float:right; color:#417bdc;}
+.IknowBtn{float:right; line-height:15px; height:15px; color:#417bdc; display:block;}
+.IknowBtn:hover{color:#124293;}
+.IknowBtn:active{color:#417bdc;}
+.noOutNoIn_openClose{    width: 235px;float: left;padding-left: 15px;}
+.noOutNoIn_Title{width:235px;float:left;padding-left:15px;line-height:22px; font-weight:bold;}
+.OI_openClose_txt{height:38px; line-height:38px; float:left; padding-right:5px;}
+.OI_openClose_toggle{float:left; }
+
+.dzwl_caozuo{ float:right; color:#417bdc;height:24px; line-height:24px;padding-top:9px;}
+.dzwl_caozuo span:nth-child(1){padding:0px 5px;float:left;}
+.dzwl_caozuo span:nth-child(2){ float:left; cursor:pointer;}
+.delthis:hover{ color:#124293;}
+.delthis:active{ color:#417bdc;}
+
+
+
+
+
+.dzwl_new_cont{width:350px; height:140px; float:left;}
+.dzwl_new_cont ul{width:320px; padding:8px 15px 0px 15px;  float:left;}
+.dzwl_new_cont ul li{padding:2px 0px; float:left; width:100%;}
+.dzwlNewCont_txt{height:38px; line-height:38px; float:left; text-align:right;}
+.dzwlNewCont_input{width:242px; padding:1px 0px; float:right;}
+.dzwl_pen_tool{width:35px; padding-top:6px;text-align:center; float:left; cursor:pointer;}
+.dzwl_pen_tool:hover{ background:#f0f3f8; border-radius:3px;}
+.dzwl_pen_tool:active{background:#d2e3ff;}
+.layui-textarea {
+    min-height: 70px;
+    height: auto;
+    padding: 6px 10px;
+    resize: vertical;
+}

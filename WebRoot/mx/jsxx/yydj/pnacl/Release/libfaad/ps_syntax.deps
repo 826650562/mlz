@@ -1,0 +1,9 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/ps_syntax.o: libfaad/ps_syntax.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/bits.h libfaad/analysis.h libfaad/ps_dec.h
+libfaad/ps_syntax.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/bits.h:
+libfaad/analysis.h:
+libfaad/ps_dec.h:

@@ -1,0 +1,5 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/syntFilter.o: libilbc/syntFilter.cpp \
+  libilbc/iLBC_define.h
+libilbc/syntFilter.cpp:
+libilbc/iLBC_define.h:

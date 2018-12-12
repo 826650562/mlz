@@ -1,0 +1,5 @@
+# Updated by fix_deps.py
+pnacl/Release/XTimeOutCount.o: XTimeOutCount.cpp XTimeOutCount.h XUtil.h
+XTimeOutCount.cpp:
+XTimeOutCount.h:
+XUtil.h:

@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/helpfun.o: libilbc/helpfun.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h
+libilbc/helpfun.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:

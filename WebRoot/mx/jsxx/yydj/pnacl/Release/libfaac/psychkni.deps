@@ -1,0 +1,15 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaac/psychkni.o: libfaac/psychkni.c libfaac/psych.h \
+  libfaac/coder.h libfaac/channels.h libfaac/fft.h libfaac/util.h \
+  C:/nacl_sdk/pepper_49/include/pnacl\memory.h libfaac/frame.h \
+  libfaac/aacquant.h libfaac/faaccfg.h
+libfaac/psychkni.c:
+libfaac/psych.h:
+libfaac/coder.h:
+libfaac/channels.h:
+libfaac/fft.h:
+libfaac/util.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:
+libfaac/frame.h:
+libfaac/aacquant.h:
+libfaac/faaccfg.h:

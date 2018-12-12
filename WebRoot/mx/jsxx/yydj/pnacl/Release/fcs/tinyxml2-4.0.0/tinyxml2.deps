@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/fcs/tinyxml2-4.0.0/tinyxml2.o: \
+  fcs/tinyxml2-4.0.0/tinyxml2.cpp fcs/tinyxml2-4.0.0/tinyxml2.h
+:
+fcs/tinyxml2-4.0.0/tinyxml2.cpp:
+fcs/tinyxml2-4.0.0/tinyxml2.h:

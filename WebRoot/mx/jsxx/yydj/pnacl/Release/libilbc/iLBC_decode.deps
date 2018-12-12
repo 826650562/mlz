@@ -1,0 +1,18 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/iLBC_decode.o: libilbc/iLBC_decode.cpp \
+  libilbc/iLBC_define.h libilbc/StateConstructW.h libilbc/LPCdecode.h \
+  libilbc/iCBConstruct.h libilbc/doCPLC.h libilbc/helpfun.h \
+  libilbc/constants.h libilbc/packing.h libilbc/enhancer.h \
+  libilbc/hpOutput.h libilbc/syntFilter.h
+libilbc/iLBC_decode.cpp:
+libilbc/iLBC_define.h:
+libilbc/StateConstructW.h:
+libilbc/LPCdecode.h:
+libilbc/iCBConstruct.h:
+libilbc/doCPLC.h:
+libilbc/helpfun.h:
+libilbc/constants.h:
+libilbc/packing.h:
+libilbc/enhancer.h:
+libilbc/hpOutput.h:
+libilbc/syntFilter.h:

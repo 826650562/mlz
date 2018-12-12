@@ -1,0 +1,9 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/LPCdecode.o: libilbc/LPCdecode.cpp \
+  libilbc/helpfun.h libilbc/lsf.h libilbc/iLBC_define.h \
+  libilbc/constants.h
+libilbc/LPCdecode.cpp:
+libilbc/helpfun.h:
+libilbc/lsf.h:
+libilbc/iLBC_define.h:
+libilbc/constants.h:

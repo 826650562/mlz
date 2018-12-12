@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/hpInput.o: libilbc/hpInput.cpp libilbc/constants.h \
+  libilbc/iLBC_define.h
+libilbc/hpInput.cpp:
+libilbc/constants.h:
+libilbc/iLBC_define.h:

@@ -1,0 +1,27 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/specrec.o: libfaad/specrec.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/structs.h libfaad/cfft.h libfaad/sbr_dec.h \
+  libfaad/ps_dec.h libfaad/bits.h libfaad/analysis.h libfaad/specrec.h \
+  libfaad/syntax.h libfaad/filtbank.h libfaad/iq_table.h libfaad/ms.h \
+  libfaad/is.h libfaad/pns.h libfaad/tns.h libfaad/drc.h \
+  libfaad/lt_predict.h libfaad/ic_predict.h
+libfaad/specrec.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/structs.h:
+libfaad/cfft.h:
+libfaad/sbr_dec.h:
+libfaad/ps_dec.h:
+libfaad/bits.h:
+libfaad/analysis.h:
+libfaad/specrec.h:
+libfaad/syntax.h:
+libfaad/filtbank.h:
+libfaad/iq_table.h:
+libfaad/ms.h:
+libfaad/is.h:
+libfaad/pns.h:
+libfaad/tns.h:
+libfaad/drc.h:
+libfaad/lt_predict.h:
+libfaad/ic_predict.h:

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+.sswz_title{width:320px; height:42px; line-height:42px; padding:0px 15px; font-size:14px; font-weight:bold; background:#003548;    box-sizing: border-box;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #055552;width:100%;}
+.sswz_search_box{width:320px;padding:15px 15px 10px 15px; float:left;border-bottom:1px solid #005675;}
+.sswz_search_box .search{width:320px; float:left; height:40px; padding:0px;}
+.search_input{width:256px; float:left; height:40px;}
+.sswzCont{width:330px;padding:10px;overflow-y:auto; overflow-x:hidden; position:absolute;top:107px;bottom:0px;left:0px;right:0px;}
+.layui-colla-title-right{z-index:1000; width:42px; height:42px; background:#003548; position:absolute;top:0px;right:0px; text-align:center; line-height:42px;}
+
+.layui-colla-title-right:hover{ background:#002130;}
+.layui-colla-title-right:active{ background:#002130;}
+.layui-colla-title{width:236px;color: #c4eefd;
+    background-color: #003548;}
+.layui-colla-title strong{max-width:190px; height:42px; line-height:42px; float:left;}
+.layui-colla-item{position:relative;border:1px solid #005675;}
+.layui-collapse {
+    border:1px solid #005675;
+    border-radius: 2px;
+}
+.layui-colla-content {padding:0px;}
+
+
+.sswz_qunzu ul{padding:0px; margin:0px;}
+.sswz_qunzu ul li{width:100%; padding:0px 5px 0px 15px; box-sizing:border-box;height:70px; border-bottom:1px solid #005675; cursor:pointer;}
+.sswz_qunzu ul li:last-child{border:none;}
+.sswz_qunzu ul li:hover{ background:#002130;transition:background-color 0.3s ease-in;}
+.sswz_person_img {height: 70px;line-height: 70px;padding-right: 10px;float: left;}
+.sswz_person_txt{    width: 85px; color:#c4eefd; float: left; height: 70px;line-height: 70px; overflow: hidden;text-overflow: ellipsis; white-space: nowrap;
+    font-weight: bold;font-size: 14px;}
+.sswz_person_time{ width: 70px; text-align:center;padding:0px 10px;float: left;height: 70px;line-height: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 13px;color:#999;}
+.sswz_person_red{ width: 70px; text-align:center;padding:0px 10px;float: left;height: 70px;line-height: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 13px;color:#fd2e24;}
+.sswz_person_dingwei{ width: 34px;float: right;height: 34px;text-align:center;padding:18px 0px 18px 0px;}
+.sswz_person_dingwei a{display:block;width:34px; height:34px;  border-radius:3px; line-height:30px; text-align:center;}	
+.sswz_person_dingwei a:hover{ background:#f3f3f3;}
+.sswz_person_dingwei a:active{ background:#f7f7f7;}
+.lsxx_active {
+    background: #25A162 !important;
+}
+._sswz_active{    background: rgb(0, 86, 117) !important;}
+.alert_content {
+    width: 275px;
+    height: 81px;
+    border-radius: 2px;
+    margin: 10px auto;
+    color: #c4eefd;
+}
+ .alert_content > ul > li {
+    height: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 14px;
+}
+.alert_footer{
+	width: 90px;
+	height: 30px;
+	margin-left: 5px;
+	border-radius: 2px;
+	background: #0774ea;
+	color: #fff;
+	line-height: 12px;
+	text-align: center;
+	font-size: 12px;
+    cursor: pointer;
+}
+.alert_footer:hover{
+	opacity:0.8;
+}
+.alert_footer_icon{
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+	margin-top: 7px;
+	float: left;
+}
+.alert_footer_text{
+	width: 48px;
+	height: 12px;
+	margin-top: 9px;
+	margin-left: 7px;
+	float: left;
+}

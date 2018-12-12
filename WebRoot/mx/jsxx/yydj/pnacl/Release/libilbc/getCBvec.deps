@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/getCBvec.o: libilbc/getCBvec.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h
+libilbc/getCBvec.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:

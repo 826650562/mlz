@@ -1,0 +1,26 @@
+package com.mlight.chat.protobuf;
+
+option java_package = "com.mlight.chat.protobuf";
+option java_outer_classname = "MessageProto";
+option optimize_for = SPEED ;  //CODE_SIZE,LITE_RUNTIME
+option java_generic_services = false;
+
+message Message {
+
+	message ParamFieldEntry {
+    required string name = 1;
+    required string value = 2;
+}
+    enum Type {
+        MESSAGE = 0;
+        REPLY = 1;
+        REQUEST = 2;
+        RESPONSE = 3;
+        PING = 4;
+        PONG = 5;
+    }
+
+    required Type type = 1;
+    repeated ParamFieldEntry param_field = 2;
+    optional string body = 3;
+}

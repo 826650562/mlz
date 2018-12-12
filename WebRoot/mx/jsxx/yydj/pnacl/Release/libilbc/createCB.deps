@@ -1,0 +1,6 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/createCB.o: libilbc/createCB.cpp \
+  libilbc/iLBC_define.h libilbc/constants.h
+libilbc/createCB.cpp:
+libilbc/iLBC_define.h:
+libilbc/constants.h:

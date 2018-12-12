@@ -1,0 +1,7 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaad/sbr_dct.o: libfaad/sbr_dct.c libfaad/common.h \
+  libfaad/neaacdec.h libfaad/sbr_dct.h
+libfaad/sbr_dct.c:
+libfaad/common.h:
+libfaad/neaacdec.h:
+libfaad/sbr_dct.h:

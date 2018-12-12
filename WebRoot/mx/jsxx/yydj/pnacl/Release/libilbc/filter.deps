@@ -1,0 +1,4 @@
+# Updated by fix_deps.py
+pnacl/Release/libilbc/filter.o: libilbc/filter.cpp libilbc/iLBC_define.h
+libilbc/filter.cpp:
+libilbc/iLBC_define.h:

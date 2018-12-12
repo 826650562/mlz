@@ -1,0 +1,17 @@
+# Updated by fix_deps.py
+pnacl/Release/libfaac/tns.o: libfaac/tns.c libfaac/frame.h \
+  libfaac/coder.h libfaac/channels.h libfaac/psych.h libfaac/fft.h \
+  libfaac/aacquant.h libfaac/faaccfg.h libfaac/bitstream.h libfaac/tns.h \
+  libfaac/util.h C:/nacl_sdk/pepper_49/include/pnacl\memory.h
+libfaac/tns.c:
+libfaac/frame.h:
+libfaac/coder.h:
+libfaac/channels.h:
+libfaac/psych.h:
+libfaac/fft.h:
+libfaac/aacquant.h:
+libfaac/faaccfg.h:
+libfaac/bitstream.h:
+libfaac/tns.h:
+libfaac/util.h:
+C:/nacl_sdk/pepper_49/include/pnacl\memory.h:

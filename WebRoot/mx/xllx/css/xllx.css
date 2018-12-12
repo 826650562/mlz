@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.xllx_add{width:330px; float:left;padding:10px; border-bottom:1px solid #e2e2e2;}
+.addButton{width:100%;}
+.xllx_box{width:350px; position:absolute;top:58px; bottom:0px; left:0px;right:0px; overflow-y: auto;overflow-x: hidden;}
+.xllx_box ul{margin:0px; float:left;width:330px; padding:10px 10px 0px 10px;}
+.xllx_box ul li{width:298px; float:left; padding:15px; border:1px solid #e2e2e2;border-radius:2px; background:#fff; margin-bottom:10px;}
+.xllx_box ul li:hover{background:#f0f3f8; cursor:pointer;transition:background-color 0.3s ease-in; border:1px solid #dce6f7;}
+.xllx_name{width:298px; padding:5px 0px; font-size:15px; font-weight:bold; float:left;}
+.xllx_cont{width:298px; float:left; padding:10px 0px;}
+.xllx_time{width:298px;float:left; height:24px; line-height:24px;}
+.xllx_zuozhe{width:200px;float:left;height:24px; line-height:24px;}
+.xllx_zuozhe span{float:left; display:block;}
+.xllx_zuozhe span:nth-child(2){width:140px;}
+.xllx_caozuo{ float:right; color:#417bdc;height:24px; line-height:24px;}
+.xllx_caozuo span:nth-child(1){padding:0px 5px;float:left;}
+.xllx_caozuo span:nth-child(2){ float:left; cursor:pointer;}
+.delthis:hover{ color:#124293;}
+.delthis:active{ color:#417bdc;}
+.xllx_active{ background:#d2e3ff !important;}
+.xllx_add_cont{width:350px; height:227px; float:left;}
+.xllx_add_cont ul{width:320px; padding:8px 15px 0px 15px;  float:left;}
+.xllx_add_cont ul li{padding:2px 0px; float:left; width:100%;}
+.xllxAddCont_txt{height:38px; line-height:38px; float:left; text-align:right;}
+.xllxAddCont_input{width:242px; padding:1px 0px; float:right;}
+.xllx_pen_tool{width:35px; padding-top:6px;text-align:center; float:left; cursor:pointer;}
+.xllx_pen_tool:hover{ background:#f0f3f8; border-radius:3px;}
+.xllx_pen_tool:active{background:#d2e3ff;}
+.layui-textarea {
+    min-height: 70px;
+    height: auto;
+    padding: 6px 10px;
+    resize: vertical;
+}
+

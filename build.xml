@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="gkzh_zhd" basedir="." default="makewar">
+	<property name="src" value="${basedir}/src/main/java" />
+	<property name="warFileName" value="gkzh_zhd.war">
+	</property>
+
+	<path id="project.lib">
+		<fileset dir="${basedir}/WebRoot/WEB-INF/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<property name="debuglevel" value="source,lines,vars" />
+
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+
+	<target name="clean">
+		<delete dir="${basedir}/build" />
+		<mkdir dir="${basedir}/build" />
+		<delete dir="${basedir}/dist" />
+		<mkdir dir="${basedir}/dist" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<javac srcdir="${basedir}/src/main/java" destdir="${basedir}/build" includeantruntime="false">
+			<classpath refid="project.lib">
+			</classpath>
+			<compilerarg line="-encoding UTF-8 " />
+		</javac>
+		<copy todir="${basedir}/build">
+			<fileset dir="${basedir}/src/main/resources">
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- 定义默认任务，将class文件集合成jar包。 -->
+	<target name="makewar" depends="compile">
+		<!-- 删除原有war包。 -->
+		<delete dir="${basedir}/dist/${warFileName}" />
+		<!-- 建立新war包。 -->
+		<war destfile="${basedir}/dist/${warFileName}" webxml="${basedir}/WebRoot/WEB-INF/web.xml" >
+			<!-- 将非jar和非class文件拷贝到war包的对应路径下。 -->
+			<fileset dir="${basedir}/WebRoot">
+				<include name="**/**.*" />
+				<exclude name="**/*.jar" />
+				<exclude name="**/*.class" />
+			</fileset>
+			<!-- 将jar和class文件拷贝到war包的对应路径下。 -->
+			<lib dir="${basedir}/WebRoot/WEB-INF/lib" />
+			<classes dir="${basedir}/build" />
+		</war>
+	</target>
+</project>
