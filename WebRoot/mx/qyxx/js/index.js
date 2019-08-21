@@ -24,14 +24,12 @@ MXZH.qyxxCF.prototype = {
 		//从数据库查询所有的企业 不在使用示例数据   此处需要分页 
         // 参数：开始时间、结束时间、搜索词、页数、每页条数
 			$.ajax({
-				url : "${basePath}/home_getQyinfo.action?time=" + new Date().getTime(),
+				url : "${basePath}/home_getQyinfo.action?pageNoOfQY="+self.config.currentpageNo+"&pageSizeOfQY="+self.config.everyPageNo+"&time=" + new Date().getTime(),
 				type : "post",
 				data : {
 					_gsName:gsName,
 					_city:city,
-					_rodaName:rodaName,
-					pageNo : self.config.currentpageNo,
-					pageSize : self.config.everyPageNo
+					_rodaName:rodaName
 				},
 				dataType : "json",
 				success : function(result) {
@@ -82,6 +80,8 @@ MXZH.qyxxCF.prototype = {
 						wkid : 3857
 					}))
 					var mkt = MXZH.ToWebMercator(point);
+					
+					
 					/*
 					
 					var point = new esri.geometry.Point(mkt[0], mkt[1], new esri.SpatialReference({

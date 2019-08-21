@@ -59,6 +59,11 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class HomeAction extends ActionSupport {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Value("#{settingProperties['ffmpeg.path']}")
 	private String ffmpeg;
 
@@ -89,6 +94,11 @@ public class HomeAction extends ActionSupport {
 	private PageBean<Message> mpb;
 	private PageBean<Tzgg> tpb;
 	public Integer pageNo;
+	public Integer pageSize;
+	
+	public Integer pageNoOfQY;
+	public Integer pageSizeOfQY;
+	
 	private List<Message> contextList;
 	private String sender;
 	private String receiver;
@@ -97,7 +107,7 @@ public class HomeAction extends ActionSupport {
 	private String ls_endTime;
 	private String ls_conditions;
 	private String groupid;
-	private Integer pageSize;
+	
 	private String searchString = "";
 	private String startTime = "";
 	private String endTime = "";
@@ -127,6 +137,30 @@ public class HomeAction extends ActionSupport {
 	/*
 	 * 以下是 警戒区域所需字段
 	 */
+	
+	public Integer getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(Integer pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	public Integer getPageNoOfQY() {
+		return pageNoOfQY;
+	}
+
+	public void setPageNoOfQY(Integer pageNoOfQY) {
+		this.pageNoOfQY = pageNoOfQY;
+	}
+
+	public Integer getPageSizeOfQY() {
+		return pageSizeOfQY;
+	}
+
+	public void setPageSizeOfQY(Integer pageSizeOfQY) {
+		this.pageSizeOfQY = pageSizeOfQY;
+	}
 
 	public String get_rodaName() {
 		return _rodaName;
@@ -765,7 +799,6 @@ public class HomeAction extends ActionSupport {
 		response.setCharacterEncoding("utf-8");
 		
 		StringBuffer Sql = new  StringBuffer("");
-		
 		StringBuffer SqlNum = new  StringBuffer("");
 		
 		if (!StringUtils.isNotBlank(searchString)) {
@@ -786,12 +819,10 @@ public class HomeAction extends ActionSupport {
 			   Sql.append( " and t.xxdz like '%"+_rodaName+"%'   ");
 			   SqlNum.append( " and t.xxdz like '%"+_rodaName+"%'   ");
 		   }
-		   
-		   Sql.append(" order by t.id asc LIMIT "+pageNo*pageSize+","+pageSize+" ");
+		   Sql.append(" order by t.id asc LIMIT "+pageNoOfQY*pageSizeOfQY+","+pageSizeOfQY+" ");
 		}
 		List res = this.mapService.getListBySql(Sql.toString());
-		
-		int totalPage = (int) Math.rint(this.mapService.countAll(SqlNum.toString())/pageSize);
+		int totalPage = (int) Math.rint(this.mapService.countAll(SqlNum.toString())/pageSizeOfQY);
 		JSONArray json2 = JSONArray.fromObject(res);
 		List reslist=new  ArrayList<>();
 		reslist.add(totalPage);

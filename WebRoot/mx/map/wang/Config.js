@@ -7,14 +7,14 @@
 	services : {
 		//地图路径配置
 		MapService : {
-			zoom : 8,
-			center : [121.414274,31.115661 ],
-			/*mapUrl : 'http://116.236.96.146:6080/arcgis/rest/services/mlBaseMap1/MapServer',
-			mapUrl2 : 'http://116.236.96.146:6080/arcgis/rest/services/mlBaseMap2/MapServer',*/
-			mapUrl:'http://116.236.96.146:6080/arcgis/rest/services/shanghai/MapServer'
+			 zoom : 3,
+			 center : [121.414274,31.115661 ],
+			 mapUrl : 'http://116.236.96.150:16080/arcgis/rest/services/ml_map1/MapServer',
+			 mapUrl2 : 'http://116.236.96.150:16080/arcgis/rest/services/ml_map2/MapServer', 
+			/*mapUrl:'http://116.236.96.146:6080/arcgis/rest/services/shanghai/MapServer'*/
 		},
-		BjURL:"http://116.236.96.146:6080/arcgis/rest/services/mlbj2/MapServer",
-		cunzhenURL:"http://116.236.96.146:6080/arcgis/rest/services/cunQY/MapServer",
+		BjURL:"http://116.236.96.150:16080/arcgis/rest/services/mlbj/MapServer",
+		cunzhenURL:"http://116.236.96.150:16080/arcgis/rest/services/czyq/MapServer",
 		/*
 		 * 资源图层控制配置项 
 		 * */
