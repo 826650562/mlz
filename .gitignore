@@ -2,8 +2,7 @@
 /.settings
 /bin/
 
-.settings
-.settings/*
+
 .classpath
 .idea/*
 /commander.iml
