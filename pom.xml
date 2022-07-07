@@ -8,7 +8,7 @@
 	<name>mchat-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>4.0.6.RELEASE</spring.version>
+		<spring.version>5.2.21.RELEASE</spring.version>
 		<hibernat.version>4.3.5.Final</hibernat.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mybatis.generator.configurationFile>${pom.basedir}/src/test/resources/mybatis-generator-config.xml
