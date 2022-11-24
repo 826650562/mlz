@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>4.0.6.RELEASE</spring.version>
-		<hibernat.version>4.3.5.Final</hibernat.version>
+		<hibernat.version>5.3.20.Final</hibernat.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mybatis.generator.configurationFile>${pom.basedir}/src/test/resources/mybatis-generator-config.xml
 		</mybatis.generator.configurationFile>
@@ -214,7 +214,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.2.7.SP1</version>
+			<version>5.3.20.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
